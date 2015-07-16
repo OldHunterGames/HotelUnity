@@ -4,4 +4,62 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Basement.unity
+  - enabled: 1
+    path: Assets/Scenes/Corridor.unity
+  - enabled: 1
+    path: Assets/Scenes/DiningRoom.unity
+  - enabled: 1
+    path: Assets/Scenes/Kitchen.unity
+  - enabled: 1
+    path: Assets/Scenes/Library.unity
+  - enabled: 1
+    path: Assets/Scenes/LightRoom.unity
+  - enabled: 1
+    path: Assets/Scenes/LivingRoom.unity
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+  - enabled: 1
+    path: Assets/Scenes/SportBar.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Outside/Room1.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Outside/Room10.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Outside/Room2.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Outside/Room3.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Outside/Room4.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Outside/Room5.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Outside/Room6.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Outside/Room7.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Outside/Room8.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Outside/Room9.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Inside/Room1.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Inside/Room10.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Inside/Room2.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Inside/Room3.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Inside/Room4.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Inside/Room5.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Inside/Room6.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Inside/Room7.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Inside/Room8.unity
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Inside/Room9.unity
