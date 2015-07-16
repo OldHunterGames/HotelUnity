@@ -22,9 +22,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lobby.unity
   - enabled: 1
-    path: Assets/Scenes/SportBar.unity
+    path: Assets/Scenes/SportsBar.unity
   - enabled: 1
-    path: Assets/Scenes/Rooms/Outside/Room1.unity
+    path: Assets/Scenes/RoomOutside.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/Outside/Room10.unity
   - enabled: 1
@@ -44,7 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/Outside/Room9.unity
   - enabled: 1
-    path: Assets/Scenes/Rooms/Inside/Room1.unity
+    path: Assets/Scenes/RoomInside.unity
   - enabled: 1
     path: Assets/Scenes/Rooms/Inside/Room10.unity
   - enabled: 1
