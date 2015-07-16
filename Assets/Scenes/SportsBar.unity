@@ -120,8 +120,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 11.875, y: 50}
+  m_SizeDelta: {x: 183.75, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &44928772
 MonoBehaviour:
@@ -233,7 +233,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Swim in the pool
+  m_Text: "\u041F\u043B\u0430\u0432\u0430\u0442\u044C \u0432 \u0431\u0430\u0441\u0441\u0435\u0439\u043D\u0435"
 --- !u!222 &407345916
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -290,8 +290,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 11.8999996, y: -50}
+  m_SizeDelta: {x: 183.699997, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &425997339
 MonoBehaviour:
@@ -479,8 +479,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 11.8750038, y: 0}
+  m_SizeDelta: {x: 183.75, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &978433972
 MonoBehaviour:
@@ -665,7 +665,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22486418, guid: 608e85d8ab89d08488d0050ff1a8ae6f, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 11.875
       objectReference: {fileID: 0}
     - target: {fileID: 22486418, guid: 608e85d8ab89d08488d0050ff1a8ae6f, type: 2}
       propertyPath: m_AnchoredPosition.y
@@ -673,7 +673,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22486418, guid: 608e85d8ab89d08488d0050ff1a8ae6f, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 183.75
       objectReference: {fileID: 0}
     - target: {fileID: 22486418, guid: 608e85d8ab89d08488d0050ff1a8ae6f, type: 2}
       propertyPath: m_SizeDelta.y
@@ -770,7 +770,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Drink in the bar
+  m_Text: "\u0412\u044B\u043F\u0438\u0442\u044C \u0432 \u0431\u0430\u0440\u0435"
 --- !u!222 &1792297542
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -836,7 +836,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Train
+  m_Text: "\u041A\u0430\u0447\u0430\u0442\u044C\u0441\u044F \u043D\u0430 \u0442\u0440\u0435\u043D\u0430\u0436\u0451\u0440\u0430\u0445"
 --- !u!222 &1914660076
 CanvasRenderer:
   m_ObjectHideFlags: 0

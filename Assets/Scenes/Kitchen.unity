@@ -422,7 +422,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cook Food
+  m_Text: "\u041F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C \u0435\u0434\u0443"
 --- !u!222 &1305389833
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -666,7 +666,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Set the table
+  m_Text: "\u041D\u0430\u043A\u0440\u044B\u0442\u044C \u043D\u0430 \u0441\u0442\u043E\u043B"
 --- !u!222 &1685794721
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -836,7 +836,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Eat fastfood
+  m_Text: "\u0424\u0430\u0441\u0442\u0444\u0443\u0434"
 --- !u!222 &1886682444
 CanvasRenderer:
   m_ObjectHideFlags: 0

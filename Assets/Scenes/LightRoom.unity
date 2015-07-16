@@ -129,7 +129,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Draw
+  m_Text: "\u0420\u0438\u0441\u043E\u0432\u0430\u0442\u044C"
 --- !u!222 &1133270
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dance
+  m_Text: "\u0422\u0430\u043D\u0446\u0435\u0432\u0430\u0442\u044C"
 --- !u!222 &819077011
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -825,7 +825,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play the piano
+  m_Text: "\u0418\u0433\u0440\u0430\u0442\u044C \u043D\u0430 \u0444\u043E\u0440\u0442\u0435\u043F\u044C\u044F\u043D\u043E"
 --- !u!222 &1384771425
 CanvasRenderer:
   m_ObjectHideFlags: 0

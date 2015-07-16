@@ -146,7 +146,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Room 2
+  m_Text: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 2"
 --- !u!222 &52906138
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -212,7 +212,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Room 7
+  m_Text: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 7"
 --- !u!222 &93712082
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -382,7 +382,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Room 3
+  m_Text: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 3"
 --- !u!222 &166027944
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -448,7 +448,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Room 1
+  m_Text: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 1"
 --- !u!222 &358813505
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -514,7 +514,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Room 9
+  m_Text: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 9"
 --- !u!222 &450770051
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -654,7 +654,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Room 6
+  m_Text: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 6"
 --- !u!222 &545364579
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -824,7 +824,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Room 8
+  m_Text: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 8"
 --- !u!222 &590087875
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1387,7 +1387,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Room 4
+  m_Text: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 4"
 --- !u!222 &1083994935
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1557,7 +1557,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Room 10
+  m_Text: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 10"
 --- !u!222 &1285109883
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1727,7 +1727,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Room 5
+  m_Text: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 5"
 --- !u!222 &1657192968
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -513,7 +513,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Work in the mine
+  m_Text: "\u0420\u0430\u0431\u043E\u0442\u0430\u0442\u044C \u0432 \u0448\u0430\u0445\u0442\u0435"
 --- !u!222 &1563138272
 CanvasRenderer:
   m_ObjectHideFlags: 0

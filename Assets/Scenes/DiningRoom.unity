@@ -570,7 +570,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Eat
+  m_Text: "\u0415\u0441\u0442\u044C"
 --- !u!222 &1808299735
 CanvasRenderer:
   m_ObjectHideFlags: 0
