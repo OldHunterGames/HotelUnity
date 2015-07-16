@@ -4,6 +4,6 @@ using System.Collections;
 public class MoveToTheLocation : MonoBehaviour {
 	
 	public void Move(string locationName) {
-		Application.LoadLevel (locationName);
+		Application.LoadLevel (LocationUtils.SceneName(locationName));
 	}
 }
