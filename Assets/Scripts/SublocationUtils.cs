@@ -3,9 +3,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-public class LocationUtils {
+public class SublocationUtils {
 
-	private static Dictionary<string, string> LOCATION_TO_SCENE = new Dictionary<string, string> {
+	private static Dictionary<string, string> SUBLOCATION_TO_SCENE = new Dictionary<string, string> {
 		{"Basement", "Basement"},
 		{"Corridor", "Corridor"},
 		{"DiningRoom", "DiningRoom"},
@@ -18,13 +18,13 @@ public class LocationUtils {
 		{"RoomInside", "RoomInside"},
 	};
 
-	static LocationUtils() {
+	static SublocationUtils() {
 		for (int roomIndex = 1; roomIndex <= 10; roomIndex++) {
-			LOCATION_TO_SCENE.Add(String.Format("RoomOutside{0}", roomIndex), "RoomOutside");
+			SUBLOCATION_TO_SCENE.Add(String.Format("RoomOutside{0}", roomIndex), "RoomOutside");
 		}
 	}
 
-	static public String SceneName(string locationName) {
-		return LocationUtils.LOCATION_TO_SCENE[locationName];
+	static public String SceneName(string sublocationName) {
+		return SublocationUtils.SUBLOCATION_TO_SCENE[sublocationName];
 	}
 }
