@@ -314,7 +314,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 414280274}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1346273423}
+        m_MethodName: FaseOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &414280274
@@ -663,7 +674,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 853480896}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1346273423}
+        m_MethodName: FaseOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &853480896
@@ -854,6 +876,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22407498, guid: e727de4927656c34d8547c0d875d914c,
     type: 2}
   m_PrefabInternal: {fileID: 1346273421}
+--- !u!114 &1346273423 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11455744, guid: e727de4927656c34d8547c0d875d914c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1346273421}
+  m_Script: {fileID: 11500000, guid: b0805c4b6da22e3439dddbf3deff4006, type: 3}
 --- !u!1 &1384771422
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,7 +1022,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1480874347}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1346273423}
+        m_MethodName: FaseOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1480874347

@@ -161,7 +161,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 33283244}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 113520132}
+        m_MethodName: FaseOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &33283244
@@ -278,6 +289,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22407498, guid: e727de4927656c34d8547c0d875d914c,
     type: 2}
   m_PrefabInternal: {fileID: 113520130}
+--- !u!114 &113520132 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11455744, guid: e727de4927656c34d8547c0d875d914c,
+    type: 2}
+  m_PrefabInternal: {fileID: 113520130}
+  m_Script: {fileID: 11500000, guid: b0805c4b6da22e3439dddbf3deff4006, type: 3}
 --- !u!1 &491769080
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,7 +841,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2022055018}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 113520132}
+        m_MethodName: FaseOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2022055018
