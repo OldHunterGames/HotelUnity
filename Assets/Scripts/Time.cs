@@ -88,7 +88,6 @@ public class Time : MonoBehaviour {
 	}
 
 	string BuildTimeString(uint currentTime) {
-		Debug.Log (string.Format ("currentTime {0}", currentTime));
 		string currentGuard = guardName [currentTime % 4];
 		string currentDecade = decadeName [(currentTime / 4) % 10];
 		string currentHolidays = holidaysName [(currentTime / (4 * 10)) % 10];
