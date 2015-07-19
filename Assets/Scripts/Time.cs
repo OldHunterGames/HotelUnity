@@ -88,10 +88,10 @@ public class Time : MonoBehaviour {
 	}
 
 	string BuildTimeString(uint currentTime) {
-		string currentGuard = guardName [currentTime % 4];
-		string currentDecade = decadeName [(currentTime / 4) % 10];
-		string currentHolidays = holidaysName [(currentTime / (4 * 10)) % 10];
-		string currentCentum = (1 + currentTime / (4 * 10 * 10)).ToString();
+		string currentGuard = guardName [currentTime % guardName.Length];
+		string currentDecade = decadeName [(currentTime / guardName.Length) % decadeName.Length];
+		string currentHolidays = holidaysName [(currentTime / (guardName.Length * decadeName.Length)) % holidaysName.Length];
+		string currentCentum = (1 + currentTime / (guardName.Length * decadeName.Length * holidaysName.Length)).ToString();
 		// TODO: добавить поддержку смен Пап.
 		return string.Format ("{0}, {1} {2} {3}го центума Папы Пия III­го.", currentGuard, currentDecade, currentHolidays, currentCentum);
 	}
