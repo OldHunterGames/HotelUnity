@@ -5,6 +5,19 @@ using System.Collections.Generic;
 
 public class SublocationUtils {
 
+	private static List<string> SUBLOCATIONS = new List<string> {
+		"Basement",
+		"Corridor",
+		"DiningRoom",
+		"Kitchen",
+		"Library",
+		"LightRoom",
+		"LivingRoom",
+		"Lobby",
+		"SportsBar",
+		"RoomInside"
+	};
+
 	private static Dictionary<string, string> SUBLOCATION_TO_SCENE = new Dictionary<string, string> {
 		{"Basement", "Basement"},
 		{"Corridor", "Corridor"},
@@ -26,5 +39,9 @@ public class SublocationUtils {
 
 	static public String SceneName(string sublocationName) {
 		return SublocationUtils.SUBLOCATION_TO_SCENE[sublocationName];
+	}
+
+	static public String RandomSublocation() {
+		return SUBLOCATIONS[UnityEngine.Random.Range (0, SUBLOCATIONS.Count)];
 	}
 }
