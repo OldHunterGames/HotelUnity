@@ -16,6 +16,7 @@ public class SublocationUtils {
 		{"Lobby", "Lobby"},
 		{"SportsBar", "SportsBar"},
 		{"RoomInside", "RoomInside"},
+		{"TestRoom", "TestRoom"},
 	};
 
 	static SublocationUtils() {
