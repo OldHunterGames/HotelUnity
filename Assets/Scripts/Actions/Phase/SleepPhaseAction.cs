@@ -1,15 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class SleepPhaseAction : MonoBehaviour {
+public class SleepPhaseAction : PhaseAction {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	override public void ExecutePhaseAction() {
+
 	}
 }
