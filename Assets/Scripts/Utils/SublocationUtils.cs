@@ -15,7 +15,8 @@ public class SublocationUtils {
 		"LivingRoom",
 		"Lobby",
 		"SportsBar",
-		"RoomInside"
+		"RoomInside",
+		"TestRoom"
 	};
 
 	private static Dictionary<string, string> SUBLOCATION_TO_SCENE = new Dictionary<string, string> {
@@ -29,6 +30,7 @@ public class SublocationUtils {
 		{"Lobby", "Lobby"},
 		{"SportsBar", "SportsBar"},
 		{"RoomInside", "RoomInside"},
+		{"TestRoom", "TestRoom"},
 	};
 
 	static SublocationUtils() {
