@@ -5,14 +5,6 @@ using System.Collections.Generic;
 public class TimeMachine {
 
 	public static readonly TimeMachine Instance = new TimeMachine();
-	
-	private GameObject _characters;
-
-	public TimeMachine() {
-		_characters = GameObject.Find ("Characters");
-
-		Debug.Assert (_characters != null, "Scene should contains 'Characters' node.");
-	}
 
 	public int ExecuteShortActions() {
 		int shortActionsCount = 0;
@@ -43,9 +35,9 @@ public class TimeMachine {
 	}
 	
 	private IEnumerable<GameObject> GetCharactersEnumerable() {
-		for (int childIndex = 0; childIndex < _characters.transform.childCount; childIndex++) {
-			yield return _characters.transform.GetChild(childIndex).gameObject;
-		}
+
+		Debug.Log (string.Format ("CharactersList: {0}", GameObject.FindGameObjectsWithTag ("Character").Length));
+		return GameObject.FindGameObjectsWithTag ("Character");
 	}
 
 	private IEnumerable<ShortActionsProducer> GetShortActionsProducersEnumerable() {
