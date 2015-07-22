@@ -12,5 +12,7 @@ public class MoveToTheSublocationShortAction : ShortAction {
 	override public void ExecuteShortAction() {
 		var componentLocation = actionSource.GetComponent<CharacterLocationComponent> ();
 		componentLocation.sublocation = _sublocationName;
+
+		Debug.Log (string.Format ("Short action '{0}'. '{1}' moved to the '{2}'.", GetType(), actionSource.name, _sublocationName));
 	}
 }
