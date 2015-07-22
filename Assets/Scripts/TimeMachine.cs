@@ -5,76 +5,93 @@ using System.Collections.Generic;
 public class TimeMachine {
 
 	public static readonly TimeMachine Instance = new TimeMachine();
+	
+	private GameObject _characters;
 
-	private List<PhaseActionsProducer> phaseActionsProducers = new List<PhaseActionsProducer> ();
-	private List<ShortActionsProducer> shortActionsProducers = new List<ShortActionsProducer> ();
-	private List<PhaseAction> phaseActions = new List<PhaseAction>();
-	private List<ShortAction> shortActions = new List<ShortAction>();
+	public TimeMachine() {
+		_characters = GameObject.Find ("Characters");
+
+		Debug.Assert (_characters != null, "Scene should contains 'Characters' node.");
+	}
 
 	public int ExecuteShortActions() {
-		reloadCharactersData ();
+		int shortActionsCount = 0;
 
-		foreach (var shortAction in shortActions) {
+		foreach (var shortAction in GetShortActionsEnumerable()) {
+			shortActionsCount++;
+
 			shortAction.ExecuteShortAction();
 		}
 
-		return shortActions.Count;
+		return shortActionsCount;
 	}
 
 	public void ExecutePhaseActions() {
-		reloadCharactersData ();
-
 		while (ExecuteShortActions() > 0) {}
 
-		foreach (var producer in phaseActionsProducers) {
+		foreach (var phaseAction in GetPhaseActionsEnumerable()) {
+			phaseAction.ExecutePhaseAction();
+		}
+
+		foreach (var producer in GetPhaseActionsProducersEnumerable()) {
 			producer.OnPhaseStart();
 		}
 
-		foreach (var producer in shortActionsProducers) {
+		foreach (var producer in GetShortActionsProducersEnumerable()) {
 			producer.OnPhaseStart();
 		}
 	}
-
-	private void reloadCharactersData() {
-		phaseActionsProducers.Clear ();
-		shortActionsProducers.Clear ();
-		phaseActions.Clear ();
-		shortActions.Clear ();
-
-		var characters = GameObject.Find ("Characters");
-    	Debug.Assert (characters != null, "Scene should contains 'Characters' node.");
-
-		for (int childIndex = 0; childIndex < characters.transform.childCount; childIndex++) {
-			var character = characters.transform.GetChild (childIndex);
-			processShortActionsProducers(character);
-			processPhaseActionsProducers(character);
+	
+	private IEnumerable<GameObject> GetCharactersEnumerable() {
+		for (int childIndex = 0; childIndex < _characters.transform.childCount; childIndex++) {
+			yield return _characters.transform.GetChild(childIndex).gameObject;
 		}
 	}
 
-	private void processShortActionsProducers(Transform character) {
-		var shortActionsProducerComponent = character.GetComponent<ShortActionsProducerComponent> ();
-		if (shortActionsProducerComponent) {
-			var producer = shortActionsProducerComponent.actionsProducer;
-			if (producer) {
-				shortActionsProducers.Add (producer);
-				var action = producer.ProduceShortAction();
-				if (action != null) {
-					shortActions.Add(action);
+	private IEnumerable<ShortActionsProducer> GetShortActionsProducersEnumerable() {
+		foreach (var character in GetCharactersEnumerable()) {
+			var component = character.GetComponent<ShortActionsProducerComponent> ();
+
+			if (component) {
+				var producer = component.actionsProducer;
+
+				if (producer) {
+					yield return producer;
 				}
 			}
 		}
 	}
 
-	private void processPhaseActionsProducers(Transform character) {
-		var phaseActionsProducerComponent = character.GetComponent<PhaseActionsProducerComponent> ();
-		if (phaseActionsProducerComponent) {
-			var producer = phaseActionsProducerComponent.actionsProducer;
-			if (producer) {
-				phaseActionsProducers.Add (producer);
-				var action = producer.ProducePhaseAction();
-				if (action != null) {
-					phaseActions.Add(action);
+	private IEnumerable<ShortAction> GetShortActionsEnumerable() {
+		foreach (var producer in GetShortActionsProducersEnumerable()) {
+			var action = producer.ProduceShortAction();
+
+			if (action != null) {
+				yield return action;
+			}
+		}
+	}
+		
+	private IEnumerable<PhaseActionsProducer> GetPhaseActionsProducersEnumerable() {
+		foreach (var character in GetCharactersEnumerable()) {
+			var component = character.GetComponent<PhaseActionsProducerComponent> ();
+			
+			if (component) {
+				var producer = component.actionsProducer;
+				
+				if (producer) {
+					yield return producer;
 				}
+			}
+		}
+	}
+	
+	private IEnumerable<PhaseAction> GetPhaseActionsEnumerable() {
+		foreach (var producer in GetPhaseActionsProducersEnumerable()) {
+			var action = producer.ProducePhaseAction();
+			
+			if (action != null) {
+				yield return action;
 			}
 		}
 	}
