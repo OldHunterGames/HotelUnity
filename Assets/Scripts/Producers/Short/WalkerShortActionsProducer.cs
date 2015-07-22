@@ -2,26 +2,36 @@ using UnityEngine;
 using System.Collections;
 
 public class WalkerShortActionsProducer : ShortActionsProducer {
-
-	private static readonly int MAX_STEPS = 3;
-
-	private int stepsRemaining = MAX_STEPS;
 	
+	private string _targetSublocation = "Library";
+
 	public override ShortAction ProduceShortAction() {
-		if (stepsRemaining > 0) {
-			stepsRemaining -= 1;
+		var componentLocation = gameObject.GetComponent<CharacterLocationComponent> ();
 
-			var action = new MoveToTheSublocationShortAction (SublocationUtils.RandomSublocation());
-			action.actionSource = gameObject;
-			action.actionTarget = gameObject;
+		Debug.Assert (componentLocation != null, "Object should attach CharacterLocationComponent.");
 
-			return action;
+		if (!componentLocation.location.Equals (_targetSublocation)) {
+			var nextSublocation = SublocationUtils.GetNextSublocationInRoute(componentLocation.sublocation, _targetSublocation);
+
+			if (nextSublocation != null) {
+				var action = new MoveToTheSublocationShortAction (nextSublocation);
+				action.actionSource = gameObject;
+				action.actionTarget = gameObject;
+
+				return action;
+			} else {
+				return null;
+			}
 		} else {
 			return null;
 		}
 	}
 
 	public override void OnPhaseStart () {
-		stepsRemaining = MAX_STEPS;
+		var previousLocation = _targetSublocation;
+
+		_targetSublocation = SublocationUtils.RandomSublocation();
+
+		Debug.Log (string.Format("'{0}' wants move to the '{1}' from '{2}'.", gameObject.name, _targetSublocation, previousLocation));
 	}
 }
