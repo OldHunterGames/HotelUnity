@@ -8,6 +8,7 @@
 *.pidb.meta
 
 sysinfo.txt
+ProjectSettings/ProjectVersion.txt
 
 # Visual Studio, Mono Develop
 
