@@ -27,6 +27,16 @@ public class WalkerShortActionsProducer : ShortActionsProducer {
 		}
 	}
 
+	protected string targetSublocation {
+		get {
+			return _targetSublocation;
+		}
+
+		set {
+			_targetSublocation = value;
+		}
+	}
+
 	public override void OnPhaseFinish () {
 		var previousLocation = _targetSublocation;
 
