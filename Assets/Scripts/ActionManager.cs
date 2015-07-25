@@ -3,15 +3,17 @@ using System.Collections;
 
 public class ActionManager : MonoBehaviour {
 
-	void Start () {
-	
+ 	public CharacterProcessor processor;
+
+	public ShortAction getNextShortAction() {
+		return processor.ProduceShortAction ();
 	}
 
-	ShortAction getNextShortAction() {
-		ShortAction action = new MoveToTheSublocationShortAction(gameObject.name);
-		Debug.Log (string.Format("Location Name = {0}, CharacterName = ","Unknow location",gameObject.name));
-		action.actionSource = gameObject;
-		action.actionTarget = gameObject;
-		return action;
+	public PhaseAction getNextPhaseAction() {
+		return processor.ProducePhaseAction ();
+	}
+
+	public void onPhaseStart() {
+		processor.OnPhaseStart ();
 	}
 }

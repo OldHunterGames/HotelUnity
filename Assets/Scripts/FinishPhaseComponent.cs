@@ -4,6 +4,6 @@ using System.Collections;
 public class FinishPhaseComponent : MonoBehaviour {
 
 	public void FinishPhase() {
-//		TimeMachine.Instance.ExecutePhaseActions();
+		TimeMachine.Instance.ExecutePhaseActions();
 	}
 }
