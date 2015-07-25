@@ -98,8 +98,9 @@ GameObject:
   - 114: {fileID: 858523120}
   - 114: {fileID: 858523119}
   - 114: {fileID: 858523121}
+  - 114: {fileID: 858523122}
   m_Layer: 0
-  m_Name: Npc1
+  m_Name: NpcWalker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,6 +158,18 @@ MonoBehaviour:
   monoScriptActionsProducer: {fileID: 11500000, guid: c0c9b280e963f4101ae93cc135c1f05a,
     type: 3}
   actionsProducer: {fileID: 0}
+--- !u!114 &858523122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 858523117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5183c56564249448a9cbe9748ac37ba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hunger: 0
 --- !u!1 &1219734970
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +181,7 @@ GameObject:
   - 114: {fileID: 1219734972}
   - 114: {fileID: 1219734971}
   - 114: {fileID: 1219734974}
+  - 114: {fileID: 1219734975}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -227,6 +241,18 @@ MonoBehaviour:
   monoScriptActionsProducer: {fileID: 11500000, guid: a86ce6fdf4eb248e9b750e019c3c7ad9,
     type: 3}
   actionsProducer: {fileID: 0}
+--- !u!114 &1219734975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1219734970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5183c56564249448a9cbe9748ac37ba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hunger: 0
 --- !u!1 &1316317238
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +362,89 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 0}
+--- !u!1 &1519776402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1519776403}
+  - 114: {fileID: 1519776407}
+  - 114: {fileID: 1519776406}
+  - 114: {fileID: 1519776405}
+  - 114: {fileID: 1519776404}
+  m_Layer: 0
+  m_Name: NpcEater
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1519776403
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1519776402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1714889633}
+  m_RootOrder: 2
+--- !u!114 &1519776404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1519776402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5183c56564249448a9cbe9748ac37ba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hunger: 0
+--- !u!114 &1519776405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1519776402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e8b3d9038ed34046b181be49dd56ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monoScriptActionsProducer: {fileID: 11500000, guid: c0c9b280e963f4101ae93cc135c1f05a,
+    type: 3}
+  actionsProducer: {fileID: 0}
+--- !u!114 &1519776406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1519776402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cfd693680b34ca88dfcd08c585ed76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sublocation: Lobby
+--- !u!114 &1519776407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1519776402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21446632d68c44908820c9c6474c7dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monoScriptActionsProducer: {fileID: 11500000, guid: f45559da279bb40a7abf7eeeb3b215a7,
+    type: 3}
+  actionsProducer: {fileID: 1831882222}
 --- !u!1 &1714889632
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +472,7 @@ Transform:
   m_Children:
   - {fileID: 1219734973}
   - {fileID: 858523118}
+  - {fileID: 1519776403}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!114 &1831882222
