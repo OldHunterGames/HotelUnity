@@ -4,6 +4,10 @@ using System.Collections;
 public class SleepPhaseAction : PhaseAction {
 
 	override public void ExecutePhaseAction() {
-		Debug.Log (string.Format ("PhaseAction action '{0}'. 'Character sleep'.", actionSource));
+		var loggerObject = GameObject.Find ("Logger");
+		var logger = loggerObject.GetComponent<Logger> ();
+
+		logger.AddEvent (string.Format ("PhaseAction action. Character '{0}' sleep.", actionSource.name));
+		Debug.Log (string.Format ("PhaseAction action. Character '{0}' sleep.", actionSource.name));
 	}
 }

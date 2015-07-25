@@ -12,6 +12,7 @@ public class TimeMachine {
 
 		foreach (var shortAction in GetShortActionsEnumerable()) {
 			shortAction.ExecuteShortAction();
+			++shortActionsCount;
 		}
 
 		return shortActionsCount;

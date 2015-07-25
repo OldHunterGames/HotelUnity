@@ -483,11 +483,11 @@ Prefab:
       objectReference: {fileID: 978494836}
     - target: {fileID: 22496308, guid: 69bfe7c526cfb3a43bd7abfdcfd46670, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22496308, guid: 69bfe7c526cfb3a43bd7abfdcfd46670, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11484578, guid: 69bfe7c526cfb3a43bd7abfdcfd46670, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
