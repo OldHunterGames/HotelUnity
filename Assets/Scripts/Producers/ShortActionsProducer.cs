@@ -7,5 +7,5 @@ public abstract class ShortActionsProducer : ScriptableObject {
 
 	public abstract ShortAction ProduceShortAction();
 
-	public abstract void OnPhaseStart();
+	public abstract void OnPhaseFinish();
 }

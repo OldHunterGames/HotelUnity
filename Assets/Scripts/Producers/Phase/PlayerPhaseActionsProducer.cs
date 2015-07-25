@@ -15,5 +15,5 @@ public class PlayerPhaseActionsProducer : PhaseActionsProducer {
 		_phaseAction = phaseAction;
 	}
 	
-	public override void OnPhaseStart () {}
+	public override void OnPhaseFinish () {}
 }

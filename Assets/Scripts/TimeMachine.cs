@@ -33,12 +33,8 @@ public class TimeMachine {
 			phaseAction.ExecutePhaseAction();
 		}
 
-		foreach (var producer in GetPhaseActionsProducersEnumerable()) {
-			producer.OnPhaseStart();
-		}
-
-		foreach (var producer in GetShortActionsProducersEnumerable()) {
-			producer.OnPhaseStart();
+		foreach (var listener in GetPhaseEventListenersEnumerable()) {
+			listener.OnPhaseFinish();
 		}
 	}
 	
@@ -92,6 +88,14 @@ public class TimeMachine {
 			
 			if (action != null) {
 				yield return action;
+			}
+		}
+	}
+
+	private IEnumerable<IPhaseEventsListener> GetPhaseEventListenersEnumerable() {
+		foreach (var character in GetCharactersEnumerable()) {
+			foreach (var component in character.GetComponents<IPhaseEventsListener>()) {
+				yield return component as IPhaseEventsListener;
 			}
 		}
 	}

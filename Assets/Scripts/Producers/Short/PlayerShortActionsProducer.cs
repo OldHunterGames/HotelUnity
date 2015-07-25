@@ -15,5 +15,5 @@ public class PlayerShortActionsProducer : ShortActionsProducer {
 		_shortAction = shortAction;
 	}
 	
-	public override void OnPhaseStart () {}
+	public override void OnPhaseFinish () {}
 }

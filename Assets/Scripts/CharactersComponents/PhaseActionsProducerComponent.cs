@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEditor;
 
-public class PhaseActionsProducerComponent : MonoBehaviour {
+public class PhaseActionsProducerComponent : MonoBehaviour, IPhaseEventsListener {
 	
 	public MonoScript monoScriptActionsProducer;
 	
@@ -13,5 +13,9 @@ public class PhaseActionsProducerComponent : MonoBehaviour {
 			actionsProducer = ScriptableObject.CreateInstance (monoScriptActionsProducer.GetClass ()) as PhaseActionsProducer;
 			actionsProducer.gameObject = gameObject;
 		}
+	}
+
+	public void OnPhaseFinish() {
+		actionsProducer.OnPhaseFinish ();
 	}
 }

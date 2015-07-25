@@ -11,5 +11,5 @@ public class WalkerPhaseActionsProducer : PhaseActionsProducer {
 		return action;
 	}
 	
-	public override void OnPhaseStart () {}
+	public override void OnPhaseFinish () {}
 }

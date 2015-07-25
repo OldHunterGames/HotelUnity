@@ -7,5 +7,5 @@ public abstract class PhaseActionsProducer : ScriptableObject {
 	
 	public abstract PhaseAction ProducePhaseAction();
 	
-	public abstract void OnPhaseStart();
+	public abstract void OnPhaseFinish();
 }

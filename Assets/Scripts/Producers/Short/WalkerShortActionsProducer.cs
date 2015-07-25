@@ -27,7 +27,7 @@ public class WalkerShortActionsProducer : ShortActionsProducer {
 		}
 	}
 
-	public override void OnPhaseStart () {
+	public override void OnPhaseFinish () {
 		var previousLocation = _targetSublocation;
 
 		_targetSublocation = SublocationUtils.RandomSublocation();
