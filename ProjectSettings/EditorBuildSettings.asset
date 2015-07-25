@@ -7,27 +7,3 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-  - enabled: 1
-    path: Assets/Scenes/Lobby.unity
-  - enabled: 1
-    path: Assets/Scenes/Basement.unity
-  - enabled: 1
-    path: Assets/Scenes/Corridor.unity
-  - enabled: 1
-    path: Assets/Scenes/DiningRoom.unity
-  - enabled: 1
-    path: Assets/Scenes/Kitchen.unity
-  - enabled: 1
-    path: Assets/Scenes/Library.unity
-  - enabled: 1
-    path: Assets/Scenes/LightRoom.unity
-  - enabled: 1
-    path: Assets/Scenes/LivingRoom.unity
-  - enabled: 1
-    path: Assets/Scenes/SportsBar.unity
-  - enabled: 1
-    path: Assets/Scenes/RoomOutside.unity
-  - enabled: 1
-    path: Assets/Scenes/RoomInside.unity
-  - enabled: 1
-    path: Assets/Scenes/TestRoom.unity
