@@ -14,4 +14,13 @@ public class Logger : MonoBehaviour {
 		log.text = string.Format ("{0}: {1}",System.DateTime.Now.ToString("HH:mm:ss"), eventString);
 		log.transform.SetParent (contentPanel);
 	}
+
+	public void ClearAll()
+	{
+		int childs = contentPanel.childCount;
+		for (int i = childs - 1; i > 0; i--)
+		{
+			GameObject.Destroy(transform.GetChild(i).gameObject);
+		}
+	}
 }

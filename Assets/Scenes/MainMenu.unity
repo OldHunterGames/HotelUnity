@@ -198,7 +198,7 @@ GameObject:
   - 114: {fileID: 283397496}
   m_Layer: 0
   m_Name: Library
-  m_TagString: Untagged
+  m_TagString: Sublocation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,7 +248,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 327450569}
-  - 114: {fileID: 327450570}
   m_Layer: 0
   m_Name: GameData
   m_TagString: Untagged
@@ -270,19 +269,6 @@ Transform:
   - {fileID: 1766216821}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &327450570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 327450568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4969e79c174bb549b8cf48cb20bb922, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logMessage: {fileID: 11422612, guid: 7cde49294d67ffc41af9c4ec77ebf4a7, type: 2}
-  contentPanel: {fileID: 1639500474}
 --- !u!1 &671688343
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +314,7 @@ GameObject:
   - 4: {fileID: 858523118}
   - 114: {fileID: 858523120}
   - 114: {fileID: 858523119}
+  - 114: {fileID: 858523123}
   - 114: {fileID: 858523121}
   - 114: {fileID: 858523122}
   m_Layer: 0
@@ -398,6 +385,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 222743333de8cbe4c8813299ae441e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &858523123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 858523117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7999e17c8e14f745b231128cf6e2790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locationName: Hotel
+  sublocationName: Lobby
 --- !u!1001 &889619160
 Prefab:
   m_ObjectHideFlags: 0
@@ -443,7 +443,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22462894, guid: 69bfe7c526cfb3a43bd7abfdcfd46670, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -147
+      value: -120
       objectReference: {fileID: 0}
     - target: {fileID: 22462894, guid: 69bfe7c526cfb3a43bd7abfdcfd46670, type: 2}
       propertyPath: m_SizeDelta.x
@@ -451,7 +451,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22462894, guid: 69bfe7c526cfb3a43bd7abfdcfd46670, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -294
+      value: -240
       objectReference: {fileID: 0}
     - target: {fileID: 22462894, guid: 69bfe7c526cfb3a43bd7abfdcfd46670, type: 2}
       propertyPath: m_AnchorMin.x
@@ -477,6 +477,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 11484578, guid: 69bfe7c526cfb3a43bd7abfdcfd46670, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 978494836}
     - target: {fileID: 22496308, guid: 69bfe7c526cfb3a43bd7abfdcfd46670, type: 2}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -485,8 +489,15 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11462788, guid: 69bfe7c526cfb3a43bd7abfdcfd46670, type: 2}
+    - target: {fileID: 11484578, guid: 69bfe7c526cfb3a43bd7abfdcfd46670, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClearAll
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484578, guid: 69bfe7c526cfb3a43bd7abfdcfd46670, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69bfe7c526cfb3a43bd7abfdcfd46670, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &929529241 stripped
@@ -494,11 +505,28 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22486418, guid: 608e85d8ab89d08488d0050ff1a8ae6f,
     type: 2}
   m_PrefabInternal: {fileID: 1012926817}
+--- !u!1 &978494834 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 158090, guid: 69bfe7c526cfb3a43bd7abfdcfd46670, type: 2}
+  m_PrefabInternal: {fileID: 889619160}
 --- !u!224 &978494835 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22462894, guid: 69bfe7c526cfb3a43bd7abfdcfd46670,
     type: 2}
   m_PrefabInternal: {fileID: 889619160}
+--- !u!114 &978494836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978494834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4969e79c174bb549b8cf48cb20bb922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logMessage: {fileID: 11422612, guid: 7cde49294d67ffc41af9c4ec77ebf4a7, type: 2}
+  contentPanel: {fileID: 1639500474}
 --- !u!1001 &1012926817
 Prefab:
   m_ObjectHideFlags: 0
@@ -751,7 +779,7 @@ GameObject:
   - 114: {fileID: 1175922186}
   m_Layer: 0
   m_Name: Kitchen
-  m_TagString: Untagged
+  m_TagString: Sublocation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -890,7 +918,7 @@ GameObject:
   - 114: {fileID: 1460632705}
   m_Layer: 0
   m_Name: Lobby
-  m_TagString: Untagged
+  m_TagString: Sublocation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1042,7 +1070,7 @@ GameObject:
   - 114: {fileID: 1759334441}
   m_Layer: 0
   m_Name: Room
-  m_TagString: Untagged
+  m_TagString: Sublocation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1123,6 +1151,7 @@ GameObject:
   - 4: {fileID: 1841709434}
   - 114: {fileID: 1841709437}
   - 114: {fileID: 1841709436}
+  - 114: {fileID: 1841709439}
   - 114: {fileID: 1841709435}
   - 114: {fileID: 1841709438}
   m_Layer: 0
@@ -1193,6 +1222,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 222743333de8cbe4c8813299ae441e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1841709439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1841709433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7999e17c8e14f745b231128cf6e2790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locationName: Hotel
+  sublocationName: Lobby
 --- !u!1001 &1987117841
 Prefab:
   m_ObjectHideFlags: 0
@@ -1322,7 +1364,7 @@ GameObject:
   - 4: {fileID: 2030958880}
   m_Layer: 0
   m_Name: Locations
-  m_TagString: Untagged
+  m_TagString: Location
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
