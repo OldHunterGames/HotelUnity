@@ -4,9 +4,9 @@ using Random = UnityEngine.Random;
 
 public class NeedsCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 
-	public int Hunger;
-	public int Freshness;
-	public int NeedForSleep;
+	public int Hunger = 0;
+	public int Freshness = 15;
+	public int NeedForSleep = 0;
 
 	public void OnPhaseFinish(){
 		if (Hunger < 5) {
@@ -15,22 +15,10 @@ public class NeedsCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 		if (Freshness > 0) {
 			Freshness--;
 		}
-		GetNeedForSleep (Freshness);
+		GetNeedForSleep ();
 	}
 
-	public NeedsCharacterComponent(int hung, int fresh){
-		Hunger = hung;
-		Freshness = fresh;
-		GetNeedForSleep (Freshness);
-	}
-
-	public NeedsCharacterComponent(){
-		Hunger = 0;
-		Freshness = 15;
-		NeedForSleep = 0;
-	}
-
-	private void GetNeedForSleep(int fresh){
+	private void GetNeedForSleep(){
 		switch (Freshness) {
 		case 15:
 			NeedForSleep = 0;
