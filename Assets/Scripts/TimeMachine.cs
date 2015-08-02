@@ -6,10 +6,10 @@ public class TimeMachine {
 
 	public static readonly TimeMachine Instance = new TimeMachine();
 	
-	private GameObject _characters;
+	private GameObject[] _characters;
 
 	public TimeMachine() {
-		_characters = GameObject.Find ("Characters");
+		_characters = GameObject.FindGameObjectsWithTag ("Character");
 
 		Debug.Assert (_characters != null, "Scene should contains 'Characters' node.");
 	}
@@ -38,14 +38,14 @@ public class TimeMachine {
 		}
 	}
 	
-	private IEnumerable<GameObject> GetCharactersEnumerable() {
-		for (int childIndex = 0; childIndex < _characters.transform.childCount; childIndex++) {
-			yield return _characters.transform.GetChild(childIndex).gameObject;
-		}
-	}
+//	private IEnumerable<GameObject> GetCharactersEnumerable() {
+//		for (int childIndex = 0; childIndex < _characters.transform.childCount; childIndex++) {
+//			yield return _characters.transform.GetChild(childIndex).gameObject;
+//		}
+//	}
 
 	private IEnumerable<ShortActionsProducer> GetShortActionsProducersEnumerable() {
-		foreach (var character in GetCharactersEnumerable()) {
+		foreach (var character in _characters) {
 			var component = character.GetComponent<ShortActionsProducerComponent> ();
 
 			if (component) {
@@ -69,7 +69,7 @@ public class TimeMachine {
 	}
 		
 	private IEnumerable<PhaseActionsProducer> GetPhaseActionsProducersEnumerable() {
-		foreach (var character in GetCharactersEnumerable()) {
+		foreach (var character in _characters) {
 			var component = character.GetComponent<PhaseActionsProducerComponent> ();
 			
 			if (component) {
@@ -93,7 +93,7 @@ public class TimeMachine {
 	}
 
 	private IEnumerable<IPhaseEventsListener> GetPhaseEventListenersEnumerable() {
-		foreach (var character in GetCharactersEnumerable()) {
+		foreach (var character in _characters) {
 			foreach (var component in character.GetComponents<IPhaseEventsListener>()) {
 				yield return component as IPhaseEventsListener;
 			}
