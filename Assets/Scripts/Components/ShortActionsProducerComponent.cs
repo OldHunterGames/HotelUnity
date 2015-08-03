@@ -16,6 +16,9 @@ public class ShortActionsProducerComponent : MonoBehaviour, IPhaseEventsListener
 	}
 
 	public void OnPhaseFinish() {
-		actionsProducer.OnPhaseFinish ();
+		Debug.Assert (actionsProducer != null, string.Format ("Cannot find producer for {0}", gameObject.name));
+		if (actionsProducer != null) {
+			actionsProducer.OnPhaseFinish ();
+		}
 	}
 }

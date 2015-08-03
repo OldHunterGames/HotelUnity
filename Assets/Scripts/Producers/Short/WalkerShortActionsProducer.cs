@@ -30,10 +30,6 @@ public class WalkerShortActionsProducer : ShortActionsProducer {
 	}
 
 	public override void OnPhaseFinish () {
-		var previousLocation = _targetSublocation;
-
 		_targetSublocation = SublocationUtils.RandomSublocation();
-
-		Debug.Log (string.Format("'{0}' wants move to the '{1}' from '{2}'.", gameObject.name, _targetSublocation, previousLocation));
 	}
 }

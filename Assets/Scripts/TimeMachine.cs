@@ -37,12 +37,6 @@ public class TimeMachine {
 			listener.OnPhaseFinish();
 		}
 	}
-	
-//	private IEnumerable<GameObject> GetCharactersEnumerable() {
-//		for (int childIndex = 0; childIndex < _characters.transform.childCount; childIndex++) {
-//			yield return _characters.transform.GetChild(childIndex).gameObject;
-//		}
-//	}
 
 	private IEnumerable<ShortActionsProducer> GetShortActionsProducersEnumerable() {
 		foreach (var character in _characters) {
