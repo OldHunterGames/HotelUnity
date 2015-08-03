@@ -15,5 +15,6 @@ public class MoveToTheSublocation : MonoBehaviour {
 		producer.SetShortAction (action);
 
 		TimeMachine.Instance.ExecuteShortActions ();
+		Application.LoadLevel (sublocationName);
 	}
 }

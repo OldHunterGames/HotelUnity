@@ -9,9 +9,7 @@ public class TimeMachine {
 	private GameObject[] _characters;
 
 	public TimeMachine() {
-		_characters = GameObject.FindGameObjectsWithTag ("Character");
-
-		Debug.Assert (_characters != null, "Scene should contains 'Characters' node.");
+		UpdateCharactersList ();
 	}
 
 	public int ExecuteShortActions() {
@@ -36,6 +34,11 @@ public class TimeMachine {
 		foreach (var listener in GetPhaseEventListenersEnumerable()) {
 			listener.OnPhaseFinish();
 		}
+	}
+
+	public void UpdateCharactersList () {
+		_characters = GameObject.FindGameObjectsWithTag ("Character");
+		Debug.Assert (_characters != null, "Scene should contains 'Characters' node.");
 	}
 
 	private IEnumerable<ShortActionsProducer> GetShortActionsProducersEnumerable() {

@@ -6,6 +6,7 @@ using UnityEditor;
 public class NpcGenerator : MonoBehaviour {
 
 	private int npcCount;
+	public GameObject prefab;
 
 	public void updateCount() {
 		InputField valueComponent = gameObject.GetComponentInChildren<InputField> ();
@@ -13,23 +14,24 @@ public class NpcGenerator : MonoBehaviour {
 	}
 		
 	public void CreateNPC() {
-		var characters = GameObject.Find ("Characters");
+		var characters = GameObject.Find ("Lobby/Characters");
 
 		for (int i = 0; i < npcCount; i++) {
-			var npc = new GameObject (string.Format("Genarated_NPC_{0}", i));
-			var shortActionsProducerComponent = npc.AddComponent<ShortActionsProducerComponent> ();
+
+			GameObject npc = Instantiate(prefab, transform.position, transform.rotation) as GameObject;
+			npc.name = string.Format("Genarated_NPC_{0}", i);
+
+			var shortActionsProducerComponent = npc.GetComponent<ShortActionsProducerComponent> ();
 			var walkerShortActionProducerScriptableObject = ScriptableObject.CreateInstance (typeof(WalkerShortActionsProducer));
 			shortActionsProducerComponent.monoScriptActionsProducer = MonoScript.FromScriptableObject (walkerShortActionProducerScriptableObject);
 
-
-			var characterLocationComponent = npc.AddComponent<CharacterLocationComponent> ();
-			characterLocationComponent.sublocation = "Lobby";
-
-			var phaseActionsProducerComponent = npc.AddComponent<PhaseActionsProducerComponent> ();
+			var phaseActionsProducerComponent = npc.GetComponent<PhaseActionsProducerComponent> ();
 			var walkerPhaseActionProducerScriptableObject = ScriptableObject.CreateInstance (typeof(WalkerPhaseActionsProducer));
 			phaseActionsProducerComponent.monoScriptActionsProducer = MonoScript.FromScriptableObject (walkerPhaseActionProducerScriptableObject);
 
 			npc.transform.parent = characters.transform;
 		}
+
+		TimeMachine.Instance.UpdateCharactersList ();
 	}
 }
