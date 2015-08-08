@@ -92,24 +92,26 @@ public class SublocationUtils {
 		var sublocation = GameObject.Find (string.Format ("Locations/{0}", sublocationName));
 		
 		var scrollViewContentShort = GameObject.Find ("Canvas/PanelShortActions/ScrollView/Content");
-		
-		for (int i = 0; i < scrollViewContentShort.transform.childCount; i++) {
-			GameObject.Destroy (scrollViewContentShort.transform.GetChild (i));
+
+		foreach (Transform child in scrollViewContentShort.transform) {
+			GameObject.Destroy(child.gameObject);
 		}
-		
+
 		foreach (var shortActionFabric in sublocation.GetComponent<Sublocation>().ShortActionFabrics) {
 			var button = GameObject.Instantiate (buttonPrefab);
 			var buttonText = button.GetComponentInChildren<Text>();
 
 			button.transform.SetParent(scrollViewContentShort.transform);
 			buttonText.text = shortActionFabric.caption;
+
+			CreateShortActionButtonListener(button, shortActionFabric);
 		}
 		
 		var scrollViewContentPhase = GameObject.Find ("Canvas/PanelPhaseActions/ScrollView/Content");
 		
-		for (int i = 0; i < scrollViewContentPhase.transform.childCount; i++) {
-			GameObject.Destroy (scrollViewContentPhase.transform.GetChild (i));
-		}
+        foreach (Transform child in scrollViewContentPhase.transform) {
+            GameObject.Destroy(child.gameObject);
+        }
 		
 		foreach (var phaseActionFabric in sublocation.GetComponent<Sublocation>().PhaseActionFabrics) {
 			var button = GameObject.Instantiate (buttonPrefab);
@@ -117,6 +119,32 @@ public class SublocationUtils {
 
 			button.transform.SetParent(scrollViewContentPhase.transform);
 			buttonText.text = phaseActionFabric.caption;
+
+			CreatePhaseActionButtonListener(button, phaseActionFabric);
 		}
+	}
+
+	private static void CreateShortActionButtonListener(GameObject button, ShortActionFabric shortActionFabric) {
+		button.GetComponent<Button>().onClick.AddListener(() => {
+			var player = GameObject.Find ("Characters/Player");
+			var producerComponent = player.GetComponent<ShortActionsProducerComponent> ();
+			var producer = producerComponent.actionsProducer as PlayerShortActionsProducer;
+			
+			producer.SetShortAction (shortActionFabric.CreateShortAction(player));
+			
+			TimeMachine.Instance.ExecuteShortActions ();
+		});
+	}
+
+	private static void CreatePhaseActionButtonListener(GameObject button, PhaseActionFabric phaseActionFabric) {
+		button.GetComponent<Button>().onClick.AddListener(() => {
+			var player = GameObject.Find ("Characters/Player");
+			var producerComponent = player.GetComponent<PhaseActionsProducerComponent> ();
+			var producer = producerComponent.actionsProducer as PlayerPhaseActionsProducer;
+			
+			producer.SetPhaseAction (phaseActionFabric.CreatePhaseAction(player));
+			
+			TimeMachine.Instance.ExecutePhaseActions ();                
+		});
 	}
 }
