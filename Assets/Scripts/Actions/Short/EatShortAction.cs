@@ -4,7 +4,7 @@ using System.Collections;
 public class EatShortAction : ShortAction {
 		
 	override public void ExecuteShortAction() {
-		var component = actionSource.GetComponent<HungerCharacterComponent> ();
+		var component = actionTarget.GetComponent<HungerCharacterComponent> ();
 
 		Debug.Assert (component != null, "Source object should attach HungerCharacterComponent.");
 
@@ -12,6 +12,6 @@ public class EatShortAction : ShortAction {
 			component.hunger -= 1;
 		}
 		
-		Debug.Log (string.Format ("Short action '{0}'. '{1}' eats.", GetType(), actionSource.name));
+		Debug.Log (string.Format ("Short action '{0}'. '{1}' eats.", GetType(), actionTarget.name));
 	}
 }

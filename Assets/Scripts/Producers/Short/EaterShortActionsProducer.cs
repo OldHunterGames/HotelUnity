@@ -10,6 +10,7 @@ public class EaterShortActionsProducer : WalkerShortActionsProducer {
 		if (componentHunger.hunger > 0 && gameObject.transform.parent.parent.name.Equals("DiningRoom")) {
 			var action = new EatShortAction();
 			action.actionSource = gameObject;
+			action.actionTarget = gameObject;
 
 			return action;
 		} else {
