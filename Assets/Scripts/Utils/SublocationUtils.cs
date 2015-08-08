@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -82,6 +83,40 @@ public class SublocationUtils {
 			}
         } else {
             return null;
+		}
+	}
+
+	static public void UpdateInterfaceForPlayer(String sublocationName) {
+		var buttonPrefab = Resources.Load<GameObject> ("ScrollViewButton");
+
+		var sublocation = GameObject.Find (string.Format ("Locations/{0}", sublocationName));
+		
+		var scrollViewContentShort = GameObject.Find ("Canvas/PanelShortActions/ScrollView/Content");
+		
+		for (int i = 0; i < scrollViewContentShort.transform.childCount; i++) {
+			GameObject.Destroy (scrollViewContentShort.transform.GetChild (i));
+		}
+		
+		foreach (var shortActionFabric in sublocation.GetComponent<Sublocation>().ShortActionFabrics) {
+			var button = GameObject.Instantiate (buttonPrefab);
+			var buttonText = button.GetComponentInChildren<Text>();
+
+			button.transform.SetParent(scrollViewContentShort.transform);
+			buttonText.text = shortActionFabric.caption;
+		}
+		
+		var scrollViewContentPhase = GameObject.Find ("Canvas/PanelPhaseActions/ScrollView/Content");
+		
+		for (int i = 0; i < scrollViewContentPhase.transform.childCount; i++) {
+			GameObject.Destroy (scrollViewContentPhase.transform.GetChild (i));
+		}
+		
+		foreach (var phaseActionFabric in sublocation.GetComponent<Sublocation>().PhaseActionFabrics) {
+			var button = GameObject.Instantiate (buttonPrefab);
+			var buttonText = button.GetComponentInChildren<Text>();
+
+			button.transform.SetParent(scrollViewContentPhase.transform);
+			buttonText.text = phaseActionFabric.caption;
 		}
 	}
 }

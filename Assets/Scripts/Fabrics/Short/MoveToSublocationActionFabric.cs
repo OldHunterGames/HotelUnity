@@ -12,4 +12,10 @@ public class MoveToSublocationActionFabric : ShortActionFabric {
 
 		return action;
 	}
+
+	public override string caption {
+		get {
+			return string.Format("Перейти в {0}", TargetSublocation.name);
+		}
+	}
 }

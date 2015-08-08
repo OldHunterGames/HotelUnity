@@ -10,10 +10,13 @@ public class MoveToTheSublocationShortAction : ShortAction {
 	}
 
 	override public void ExecuteShortAction() {
-
-		var currentLocation = actionSource.transform.parent;
+		var currentLocation = actionTarget.transform.parent;
 		var targetLocation = GameObject.Find (string.Format("Locations/{0}/Characters", _sublocationName));
-		Debug.Log (string.Format ("Short action '{0}'. '{1}' moved from {2} to the '{3}'.", GetType(), actionSource.name, currentLocation.parent.name, _sublocationName));
+		Debug.Log (string.Format ("Short action '{0}'. '{1}' moved from {2} to the '{3}'.", GetType(), actionTarget.name, currentLocation.parent.name, _sublocationName));
 		actionSource.transform.parent = targetLocation.transform;
+
+		if (actionTarget.name.Equals ("Player")) {
+			SublocationUtils.UpdateInterfaceForPlayer (_sublocationName);
+        }
 	}
 }
