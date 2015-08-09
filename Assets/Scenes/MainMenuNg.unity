@@ -130,6 +130,10 @@ Prefab:
       propertyPath: m_Name
       value: Lobby
       objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: name
+      value: "\u041B\u043E\u0431\u0431\u0438"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
   m_IsPrefabParent: 0
@@ -564,6 +568,21 @@ Prefab:
       propertyPath: m_Name
       value: Kitchen
       objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: name
+      value: "\u041A\u0443\u0445\u043D\u044F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: description
+      value: "\u041F\u0440\u043E\u0441\u0442\u043E\u0440\u043D\u0430\u044F \u0438
+        \u0445\u043E\u0440\u043E\u0448\u043E \u043E\u0431\u043E\u0440\u0443\u0434\u043E\u0432\u0430\u043D\u043D\u0430\u044F
+        \u043A\u0443\u0445\u043D\u044F \u0441 \u043F\u043E\u043B\u043D\u044B\u043C
+        \u043D\u0430\u0431\u043E\u0440\u043E\u043C \u0442\u0435\u0445\u043D\u0438\u043A\u0438
+        \ \u0412 \u043E\u0433\u0440\u043E\u043C\u043D\u043E\u043C \u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A\u0435
+        \u0438 \u0448\u043A\u0430\u0444\u0430\u0445 \u0431\u043E\u043B\u044C\u0448\u043E\u0439
+        \u0437\u0430\u043F\u0430\u0441 \u0440\u0430\u0437\u043D\u043E\u043E\u0431\u0440\u0430\u0437\u043D\u043E\u0439
+        \u0435\u0434\u044B."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
   m_IsPrefabParent: 0
@@ -863,6 +882,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: name
+      value: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 \u21161"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: description
+      value: "\u041F\u0435\u0440\u0432\u0430\u044F \u043A\u043E\u043C\u043D\u0430\u0442\u0430"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
   m_IsPrefabParent: 0
@@ -979,6 +1006,19 @@ Prefab:
       propertyPath: m_Name
       value: LivingRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: name
+      value: "\u0413\u043E\u0441\u0442\u0438\u043D\u0430\u044F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: description
+      value: "\u0423\u0434\u043E\u0431\u043D\u044B\u0439 \u0437\u0430\u043B \u0441
+        \u0434\u0438\u0432\u0430\u043D\u0430\u043C\u0438, \u043A\u0440\u0435\u0441\u043B\u0430\u043C\u0438,
+        \u043A\u043E\u0432\u0440\u043E\u043C, \u0436\u0443\u0440\u043D\u0430\u043B\u044C\u043D\u044B\u043C\u0438
+        \u0441\u0442\u043E\u043B\u0438\u043A\u0430\u043C\u0438 \u0438  \u0434\u043E\u043C\u0430\u0448\u043D\u0438\u043C
+        \u043A\u0438\u043D\u043E\u0442\u0435\u0430\u0442\u0440\u043E\u043C. \u041D\u0430
+        \u0441\u0442\u0435\u043D\u0430\u0445 \u0432\u0438\u0441\u044F\u0442 \u043A\u0430\u0440\u0442\u0438\u043D\u044B."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
   m_IsPrefabParent: 0
@@ -1028,6 +1068,17 @@ Prefab:
     - target: {fileID: 176834, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
       propertyPath: m_Name
       value: DiningRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: name
+      value: "\u0421\u0442\u043E\u043B\u043E\u0432\u0430\u044F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: description
+      value: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 \u0441 \u0434\u043B\u0438\u043D\u043D\u044B\u043C
+        \u0441\u0442\u043E\u043B\u043E\u043C \u0438\u0437 \u043C\u0430\u0441\u0441\u0438\u0432\u0430
+        \u0434\u0443\u0431\u0430 \u0438 \u0434\u0432\u0435\u043D\u0430\u0434\u0446\u0430\u0442\u044C\u044E
+        \u043C\u044F\u0433\u043A\u0438\u043C\u0438 \u0441\u0442\u0443\u043B\u044C\u044F\u043C\u0438."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
@@ -1086,6 +1137,25 @@ Prefab:
     - target: {fileID: 176834, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
       propertyPath: m_Name
       value: LightRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: name
+      value: "\u0421\u0432\u0435\u0442\u043B\u0430\u044F \u043A\u043E\u043C\u043D\u0430\u0442\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: description
+      value: "\u041F\u043E\u0434 \u0441\u0442\u0435\u043A\u043B\u044F\u043D\u043D\u043E\u0439
+        \u043A\u0440\u044B\u0448\u0435\u0439 \u0440\u0430\u0441\u043F\u043E\u043B\u043E\u0436\u0435\u043D
+        \u0437\u0430\u043B\u0438\u0442\u044B\u0439 \u0441\u043E\u043B\u043D\u0435\u0447\u043D\u044B\u043C
+        \u0441\u0432\u0435\u0442\u043E\u043C \u0437\u0430\u043B, \u0432 \u043A\u043E\u0442\u043E\u0440\u043E\u043C
+        \u0443  \u043E\u0434\u043D\u043E\u0439 \u0441\u0442\u0435\u043D\u044B \u0441\u0442\u043E\u044F\u0442
+        \u043C\u043E\u043B\u044C\u0431\u0435\u0440\u0442\u044B \u0438 \u043C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u044B\u0435
+        \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442\u044B, \u0430
+        \u0434\u0440\u0443\u0433\u0430\u044F \u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F
+        \  \u0441\u043F\u043B\u043E\u0448\u043D\u044B\u043C \u0437\u0435\u0440\u043A\u0430\u043B\u043E\u043C
+        \u0441 \u043F\u043E\u0440\u0443\u0447\u043D\u0435\u043C \u0432\u0434\u043E\u043B\u044C
+        \u043D\u0435\u0433\u043E, \u043A\u0430\u043A \u0432 \u0431\u0430\u043B\u0435\u0442\u043D\u044B\u0445
+        \u043A\u043B\u0430\u0441\u0441\u0430\u0445."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
@@ -1313,6 +1383,17 @@ Prefab:
     - target: {fileID: 176834, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
       propertyPath: m_Name
       value: Library
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: name
+      value: "\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: description
+      value: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 \u0441\u043E \u0448\u043A\u0430\u0444\u0430\u043C\u0438
+        \u0434\u043E \u043F\u043E\u0442\u043E\u043B\u043A\u0430 \u0437\u0430\u0431\u0438\u0442\u044B\u043C\u0438
+        \u0441\u0430\u043C\u044B\u043C\u0438 \u0440\u0430\u0437\u043D\u044B\u043C\u0438
+        \u043A\u043D\u0438\u0433\u0430\u043C\u0438."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
@@ -1937,6 +2018,26 @@ Prefab:
       propertyPath: m_Name
       value: Basement
       objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: name
+      value: "\u041F\u043E\u0434\u0432\u0430\u043B \u0441 \u0448\u0430\u0445\u0442\u043E\u0439"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: description
+      value: "\u041F\u044B\u043B\u044C\u043D\u044B\u0439 \u043F\u043E\u0434\u0432\u0430\u043B
+        \u0432 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u0441\u0432\u0430\u043B\u0435\u043D\u0430
+        \u0432 \u043A\u0443\u0447\u0443 \u043E\u0442\u0440\u0430\u0431\u043E\u0442\u0430\u043D\u043D\u0430\u044F
+        \u0440\u0443\u0434\u0430, \u044F\u0449\u0438\u043A\u0438 \u0441  \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442\u0430\u043C\u0438
+        \u0438 \u043E\u0431\u043E\u0440\u0443\u0434\u043E\u0432\u0430\u043D\u0438\u0435\u043C.
+        \u0414\u0430\u043B\u044C\u043D\u044F\u044F \u043E\u0442 \u0432\u0445\u043E\u0434\u0430
+        \u0441\u0442\u0435\u043D\u0430 \u0440\u0430\u0437\u043B\u043E\u043C\u0430\u043D\u0430
+        \u0438 \u043F\u0440\u0435\u0432\u0440\u0430\u0449\u0435\u043D\u0430 \u0432
+        \  \u0448\u0442\u043E\u043B\u044C\u043D\u044E. \u041A\u0440\u0438\u0432\u044B\u0435,
+        \u043E\u0431\u0440\u0430\u0431\u043E\u0442\u0430\u043D\u043D\u044B\u0435 \u043A\u0438\u0440\u043A\u0430\u043C\u0438
+        \u0438 \u043B\u043E\u043C\u0430\u043C\u0438 \u0441\u0442\u0435\u043D\u044B
+        \u0441\u0432\u0435\u0440\u043A\u0430\u044E\u0442 \u0432\u043A\u0440\u0430\u043F\u043B\u0435\u043D\u0438\u044F\u043C\u0438
+        \  \u0431\u0440\u0438\u043B\u044C\u044F\u043D\u0442\u043E\u0432."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
   m_IsPrefabParent: 0
@@ -1952,6 +2053,56 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 430706, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
   m_PrefabInternal: {fileID: 936244212}
+--- !u!1001 &1367511578
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1992016156}
+    m_Modifications:
+    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 145726, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
+      propertyPath: m_Name
+      value: DoorToRoom_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471942, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
+      propertyPath: TargetSublocation
+      value: 
+      objectReference: {fileID: 391460434}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1410764299
 Prefab:
   m_ObjectHideFlags: 0
@@ -2106,56 +2257,6 @@ Prefab:
     - target: {fileID: 145726, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
       propertyPath: m_Name
       value: DoorToCorridor
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &1487638855
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1717627}
-    m_Modifications:
-    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 486408, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 11471942, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
-      propertyPath: TargetSublocation
-      value: 
-      objectReference: {fileID: 391460434}
-    - target: {fileID: 145726, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
-      propertyPath: m_Name
-      value: DoorToRoomInside
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b506ea284ccd848998d65a99c9df62cf, type: 2}
@@ -2361,11 +2462,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 430706, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 430
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 430706, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 206
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 430706, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2394,6 +2495,10 @@ Prefab:
     - target: {fileID: 176834, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
       propertyPath: m_Name
       value: TestRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: name
+      value: "\u0422\u0435\u0441\u0442\u043E\u0432\u0430\u044F \u043A\u043E\u043C\u043D\u0430\u0442\u0430"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
@@ -2758,6 +2863,10 @@ Prefab:
     - target: {fileID: 490212, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: name
+      value: "\u041A\u043E\u0440\u0438\u0434\u043E\u0440"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
@@ -3133,6 +3242,18 @@ Prefab:
     - target: {fileID: 176834, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
       propertyPath: m_Name
       value: SportsBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: name
+      value: "\u0421\u043F\u043E\u0440\u0442\u0438\u0432\u043D\u044B\u0439 \u0431\u0430\u0440"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11404416, guid: 447d379e84c2ad7439af398392734bbc, type: 2}
+      propertyPath: description
+      value: "\u0426\u0435\u043B\u044B\u0439 \u043D\u0435\u0431\u043E\u043B\u044C\u0448\u043E\u0439
+        \u0441\u043F\u043E\u0440\u0442\u0438\u0432\u043D\u043E-\u0440\u0430\u0437\u0432\u043B\u0435\u043A\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+        \u043A\u043E\u043C\u043F\u043B\u0435\u043A\u0441 \u0441 \u0431\u0430\u0440\u043E\u043C,
+        \u0431\u0430\u0441\u0441\u0435\u0439\u043D\u043E\u043C,  \u0442\u0440\u0435\u043D\u0430\u0436\u0435\u0440\u043D\u044B\u043C
+        \u0437\u0430\u043B\u043E\u043C \u0438 \u0434\u0443\u0448\u0435\u0432\u044B\u043C\u0438."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 447d379e84c2ad7439af398392734bbc, type: 2}

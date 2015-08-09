@@ -5,7 +5,7 @@ public abstract class PhaseActionFabric : MonoBehaviour {
 
 	public abstract PhaseAction CreatePhaseAction(GameObject target);
 
-	public string caption {
+	public virtual string caption {
 		get {
 			return GetType().ToString();
 		}

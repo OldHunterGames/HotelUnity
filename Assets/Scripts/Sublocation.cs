@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 public class Sublocation : MonoBehaviour {
 
+	public string name;
+
+	public string description;
+
 	public ShortActionFabric[] ShortActionFabrics {
 		get {
 			return gameObject.GetComponentsInChildren<ShortActionFabric>();
