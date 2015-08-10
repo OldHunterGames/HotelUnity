@@ -7,11 +7,16 @@ public class EaterShortActionsProducer : WalkerShortActionsProducer {
 		var componentHunger = gameObject.GetComponent<HungerCharacterComponent> ();
 		Debug.Assert (componentHunger != null, "Object should attach HungerCharacterComponent.");
 
-		if (componentHunger.hunger > 0 && gameObject.transform.parent.parent.name.Equals("DiningRoom")) {
-			var action = new EatShortAction();
-			action.actionSource = gameObject;
-			action.actionTarget = gameObject;
+		var character = gameObject.GetComponent<Character> ();
+		var sublocation = character.Sublocation.GetComponent<Sublocation> ();
 
+		if (componentHunger.hunger > 0 && sublocation.name.Equals("DiningRoom")) {
+
+			var actionFabric = sublocation.getActionFabric<EatShortActionFabric> ();
+			if (actionFabric == null) {
+				return null;
+			}
+			var action = actionFabric.CreateShortAction (gameObject);
 			return action;
 		} else {
 			return base.ProduceShortAction ();

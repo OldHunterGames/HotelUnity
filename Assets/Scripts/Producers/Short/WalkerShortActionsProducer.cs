@@ -6,14 +6,21 @@ public class WalkerShortActionsProducer : ShortActionsProducer {
 	private string _targetSublocation = "Library";
 
 	public override ShortAction ProduceShortAction() {
-		var currentSubLocation = gameObject.transform.parent.parent;
-		Debug.Assert (currentSubLocation != null, "Object should be child of Location/Characters");
-		if (!currentSubLocation.name.Equals (_targetSublocation)) {
-			var nextSublocationName = SublocationUtils.GetNextSublocationInRoute(currentSubLocation.name, _targetSublocation);
-			var action = new MoveToTheSublocationShortAction (nextSublocationName);
-			action.actionSource = gameObject;
-			action.actionTarget = gameObject;
-			return action;
+		var character = gameObject.GetComponent<Character> ();
+		var sublocation = character.Sublocation.GetComponent<Sublocation> ();
+
+		Debug.Assert (sublocation != null, "Object should be child of Location/Characters");
+		if (!sublocation.name.Equals (_targetSublocation)) {
+			var nextSublocationName = SublocationUtils.GetNextSublocationInRoute(sublocation.name, _targetSublocation);
+
+			foreach (var actionFabric in sublocation.getActionFabrics<MoveToSublocationActionFabric> ())
+			{
+				if (actionFabric.TargetSublocation.name == nextSublocationName) {
+					var action = actionFabric.CreateShortAction (gameObject);
+					return action;
+				}
+			}
+			return null;
 		} else {
 			return null;
 		}

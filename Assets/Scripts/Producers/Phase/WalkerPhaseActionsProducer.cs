@@ -4,10 +4,15 @@ using System.Collections;
 public class WalkerPhaseActionsProducer : PhaseActionsProducer {
 		
 	public override PhaseAction ProducePhaseAction() {
-		var action = new SleepPhaseAction ();
-		action.actionSource = gameObject;
-		action.actionTarget = gameObject;
 
+		var character = gameObject.GetComponent<Character> ();
+		var sublocation = character.Sublocation.GetComponent<Sublocation> ();
+		var actionFabric = sublocation.getActionFabric<SleepPhaseActionFabric> ();
+		if (actionFabric == null) {
+			return null;
+		}
+		var action = actionFabric.CreatePhaseAction (gameObject);
+		Debug.Log (gameObject.name);
 		return action;
 	}
 	
