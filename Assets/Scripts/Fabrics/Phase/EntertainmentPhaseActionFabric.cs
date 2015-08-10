@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WatchTVPhaseActionFabric : PhaseActionFabric {
+public class EntertainmentPhaseActionFabric : PhaseActionFabric {
 	
-	public string tvName;
+	public string title;
 	
 	override public PhaseAction CreatePhaseAction(GameObject target) {
-		var action = new WatchTVPhaseAction ();
+		var action = new SatisfyEntertainmentPhaseAction ();
 		action.actionSource = gameObject;
 		action.actionTarget = target;
 		
@@ -15,7 +15,7 @@ public class WatchTVPhaseActionFabric : PhaseActionFabric {
 	
 	public override string caption {
 		get {
-			return string.Format("Смотреть {0}", tvName);
+			return title;
 		}
 	}
 }

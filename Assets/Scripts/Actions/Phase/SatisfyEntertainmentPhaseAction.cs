@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WatchTVPhaseAction : PhaseAction {
+public class SatisfyEntertainmentPhaseAction : PhaseAction {
 	
 	override public void ExecutePhaseAction() {
 		var component = actionTarget.GetComponent<EntertainmentCharacterComponent> ();

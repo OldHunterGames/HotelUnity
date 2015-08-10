@@ -1,60 +1,60 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &184888
+--- !u!1 &199618
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 470038}
-  - 114: {fileID: 11405504}
-  - 114: {fileID: 11486970}
+  - 4: {fileID: 478562}
+  - 114: {fileID: 11468614}
+  - 114: {fileID: 11401200}
   m_Layer: 0
-  m_Name: TV
+  m_Name: Sofa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &470038
+--- !u!4 &478562
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184888}
+  m_GameObject: {fileID: 199618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11405504
+--- !u!114 &11401200
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184888}
+  m_GameObject: {fileID: 199618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e606406f9f585df4e8ce7dce9f6df7ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: 
---- !u!114 &11486970
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e70bb34e7da21442b33955d1d316fbd, type: 3}
+  m_Script: {fileID: 11500000, guid: cbc87a4f31f6b984894ea1e2fba987f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   needName: 
   needDescription: 
   needSatisfyRate: 5
+--- !u!114 &11468614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b15326e457ab604bb0b3f8f6d1ad248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -63,10 +63,14 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: title
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: needName
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 184888}
+  m_RootGameObject: {fileID: 199618}
   m_IsPrefabParent: 1
