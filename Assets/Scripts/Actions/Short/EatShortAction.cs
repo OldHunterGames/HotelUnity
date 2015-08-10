@@ -7,13 +7,9 @@ public class EatShortAction : ShortAction {
 		var component = actionTarget.GetComponent<HungerCharacterComponent> ();
 		Debug.Assert (component != null, "Source object should attach HungerCharacterComponent.");
 		var foodDetails = actionSource.GetComponent<FoodDetailsComponent> ();
-		Debug.Assert (component != null, "Source object should attach FoodDetailsComponent.");
+		Debug.Assert (foodDetails != null, "Source object should attach FoodDetailsComponent.");
 
 		component.hunger -= foodDetails.hungerRestore;
-		if (component.hunger < 0) {
-			component.hunger = 0;
-		}
-		
-		Debug.Log (string.Format ("Short action '{0}'. '{1}' eats {2}.", GetType(), actionTarget.name, foodDetails.foodName));
+		Debug.Log (string.Format ("Short action '{0}'. '{1}' eats {2}.", GetType (), actionTarget.name, foodDetails.foodName));
 	}
 }
