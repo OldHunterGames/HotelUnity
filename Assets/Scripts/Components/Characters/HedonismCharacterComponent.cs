@@ -4,8 +4,8 @@ using Utils;
 
 public class HedonismCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 
-	private const int minHedonism = 0;
-	private const int maxHedonism = 15;
+	private const int minHedonism = -1;
+	private const int maxHedonism = 100;
 	
 	[SerializeField]
 	private int _hedonism = minHedonism;
@@ -20,6 +20,6 @@ public class HedonismCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 	}
 	
 	public void OnPhaseFinish() {
-		--hedonism;
+		++hedonism;
 	}
 }
