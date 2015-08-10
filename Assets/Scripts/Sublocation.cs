@@ -19,4 +19,12 @@ public class Sublocation : MonoBehaviour {
 			return gameObject.GetComponentsInChildren<PhaseActionFabric>();
 		}
 	}
+
+	public T getActionFabric<T>() {
+		return gameObject.GetComponentInChildren<T>();
+	}
+
+	public T[] getActionFabrics<T>() {
+		return gameObject.GetComponentsInChildren<T>();
+	}
 }
