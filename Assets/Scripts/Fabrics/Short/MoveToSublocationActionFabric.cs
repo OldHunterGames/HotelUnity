@@ -16,7 +16,7 @@ public class MoveToSublocationActionFabric : ShortActionFabric {
 	public override string caption {
 		get {
 			var sublocationInfo = TargetSublocation.GetComponent<Sublocation>();
-			string sublocationName = sublocationInfo.name.Length > 0 ? sublocationInfo.name : TargetSublocation.name;
+			string sublocationName = sublocationInfo.locationName.Length > 0 ? sublocationInfo.locationName : TargetSublocation.name;
 
 			return string.Format("Перейти в {0}", sublocationName);
 		}

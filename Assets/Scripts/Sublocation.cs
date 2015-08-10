@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 public class Sublocation : MonoBehaviour {
 
-	public string name;
+	public string locationName;
 
-	public string description;
+	public string locationDescription;
 
 	public ShortActionFabric[] ShortActionFabrics {
 		get {
