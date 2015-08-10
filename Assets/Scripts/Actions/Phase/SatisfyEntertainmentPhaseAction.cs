@@ -5,7 +5,7 @@ public class SatisfyEntertainmentPhaseAction : PhaseAction {
 	
 	override public void ExecutePhaseAction() {
 		var component = actionTarget.GetComponent<EntertainmentCharacterComponent> ();
-		Debug.Assert (component != null, "Source object should attach HungerCharacterComponent.");
+		Debug.Assert (component != null, "Source object should attach EntertainmentCharacterComponent.");
 		var entertainmentDetails = actionSource.GetComponent<EntertainmentObjectDetails> ();
 		Debug.Assert (entertainmentDetails != null, "Source object should attach EntertainmentObjectDetails.");
 		
