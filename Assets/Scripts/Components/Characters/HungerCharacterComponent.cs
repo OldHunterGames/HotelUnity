@@ -1,13 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Utils;
 
 public class HungerCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 
-	public int hunger = 0;
+	private const int minHunger = 0;
+	private const int maxHunger = 5;
 
-	public void OnPhaseFinish() {
-		if (hunger < 5) {
-			hunger += 1;
+	[SerializeField]
+	private int _hunger = minHunger;
+
+	public int hunger {
+		get {
+			return _hunger;
 		}
+		set {
+			_hunger = RangeValidator.validate(value, minHunger, maxHunger);
+		}
+	}
+	
+	public void OnPhaseFinish() {
+		++hunger;
 	}
 }
