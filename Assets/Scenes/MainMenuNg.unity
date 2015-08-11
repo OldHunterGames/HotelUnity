@@ -2803,6 +2803,11 @@ Prefab:
       propertyPath: destination
       value: 
       objectReference: {fileID: 1302512218}
+    - target: {fileID: 11476498, guid: 64cef79106cf4e8409f5db702ff4e479, type: 2}
+      propertyPath: title
+      value: "\u041F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C \u0435\u0434\u0443
+        \u0434\u043B\u044F \u0432\u0441\u0435\u0445"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64cef79106cf4e8409f5db702ff4e479, type: 2}
   m_IsPrefabParent: 0

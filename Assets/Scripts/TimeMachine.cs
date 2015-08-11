@@ -25,7 +25,11 @@ public class TimeMachine {
 	}
 
 	public void ExecutePhaseActions() {
-		while (ExecuteShortActions() > 0) {}
+		int shortActionCounter = 0;
+		while (ExecuteShortActions() > 0 && shortActionCounter < 10) {
+			++shortActionCounter;
+		}
+		Debug.Assert (shortActionCounter < 10, "Warning: Maximum ShortActionsCount occured");
 
 		foreach (var phaseAction in GetPhaseActionsEnumerable()) {
 			phaseAction.ExecuteAction();

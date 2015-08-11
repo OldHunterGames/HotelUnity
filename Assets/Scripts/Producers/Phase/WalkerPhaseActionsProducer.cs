@@ -8,6 +8,7 @@ public class WalkerPhaseActionsProducer : PhaseActionsProducer {
 		var character = gameObject.GetComponent<Character> ();
 		var sublocation = character.Sublocation.GetComponent<Sublocation> ();
 		var actionFabric = sublocation.getActionFabric<SleepPhaseActionFabric> ();
+		Debug.Assert (sublocation != null, "Object should be attached SleepPhaseActionFabric");
 		if (actionFabric == null) {
 			return null;
 		}

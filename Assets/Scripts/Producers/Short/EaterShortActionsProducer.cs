@@ -9,10 +9,12 @@ public class EaterShortActionsProducer : WalkerShortActionsProducer {
 
 		var character = gameObject.GetComponent<Character> ();
 		var sublocation = character.Sublocation.GetComponent<Sublocation> ();
+		Debug.Assert (sublocation != null, "Object should attach Sublocation.");
 
 		if (componentHunger.hunger > 0 && sublocation.name.Equals("DiningRoom")) {
 
 			var actionFabric = sublocation.getActionFabric<EatShortActionFabric> ();
+			Debug.Assert (actionFabric != null, "Object should attach EatShortActionFabric.");
 			if (actionFabric == null) {
 				return null;
 			}
@@ -28,7 +30,7 @@ public class EaterShortActionsProducer : WalkerShortActionsProducer {
 
 		Debug.Assert (component != null, "Object should attach HungerCharacterComponent.");
 
-		if (component.hunger == 5) {
+		if (component.hunger >= 5) {
 			targetSublocation = "DiningRoom";
 		} else {
 			base.OnPhaseFinish ();

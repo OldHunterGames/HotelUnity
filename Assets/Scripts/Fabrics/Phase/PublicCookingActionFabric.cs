@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PublicCookingActionFabric : PhaseActionFabric {
 
+	public string title;
 	public GameObject food;
 	public GameObject destination;
 
@@ -18,9 +19,7 @@ public class PublicCookingActionFabric : PhaseActionFabric {
 	
 	public override string caption {
 		get {
-			var foodInfo = gameObject.GetComponent<AltruismObjectDetails>();
-			string foodName = foodInfo.needName.Length > 0 ? foodInfo.needName : gameObject.name;
-			return string.Format("Приготовить всем {0} на {1}", foodName, gameObject.name);
+			return title;
 		}
 	}
 }
