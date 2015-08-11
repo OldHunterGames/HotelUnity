@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SatisfyHedonismAction : PhaseAction {
+public class SatisfyHedonismAction : Action {
 	
 	public override void ExecuteAction() {
 		var component = actionTarget.GetComponent<HedonismCharacterComponent> ();

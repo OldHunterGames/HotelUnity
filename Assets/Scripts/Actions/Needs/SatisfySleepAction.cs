@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SatisfySleepAction : PhaseAction {
+public class SatisfySleepAction : Action {
 
 	public override void ExecuteAction() {
 		var component = actionTarget.GetComponent<SleepCharacterComponent> ();
