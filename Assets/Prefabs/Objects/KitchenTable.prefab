@@ -8,8 +8,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 491288}
-  - 114: {fileID: 11476498}
   - 114: {fileID: 11439738}
+  - 114: {fileID: 11476498}
+  - 114: {fileID: 11444690}
   m_Layer: 0
   m_Name: KitchenTable
   m_TagString: Untagged
@@ -42,6 +43,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food: {fileID: 128942, guid: 420731246741a460490b378e6794f5de, type: 2}
   destination: {fileID: 0}
+--- !u!114 &11444690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ef2785cfc1f8f4989a12f3e0dbe3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  needName: "\u041E\u0431\u0449\u0438\u0439 \u043E\u0431\u0435\u0434"
+  needDescription: 
+  needSatisfyRate: 5
 --- !u!114 &11476498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -61,7 +76,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: needSatisfyRate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: needName
+      value: "\u041E\u0431\u0449\u0438\u0439 \u043E\u0431\u0435\u0434"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 125082}

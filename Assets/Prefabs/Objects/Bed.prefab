@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 489060}
   - 114: {fileID: 11483014}
+  - 114: {fileID: 11462914}
   m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
@@ -28,6 +29,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11462914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d76c29867207fd34ba24b20bcf6b533c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  needName: 
+  needDescription: 
+  needSatisfyRate: 15
 --- !u!114 &11483014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -39,13 +54,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0503016e48a334be3baccb7320aac792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bedName: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: needSatisfyRate
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 175650}
