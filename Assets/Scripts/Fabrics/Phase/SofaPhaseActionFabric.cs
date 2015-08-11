@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EntertainmentPhaseActionFabric : PhaseActionFabric {
+public class SofaPhaseActionFabric : PhaseActionFabric {
 	
 	public string title;
 	
 	override public PhaseAction CreatePhaseAction(GameObject target) {
-		var action = new SatisfyEntertainmentPhaseAction ();
+		var action = new SofaPhaseAction ();
 		action.actionSource = gameObject;
 		action.actionTarget = target;
 		
