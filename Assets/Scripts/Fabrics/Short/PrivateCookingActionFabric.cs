@@ -8,7 +8,7 @@ public class PrivateCookingActionFabric : ShortActionFabric {
 
 	override public ShortAction CreateShortAction(GameObject target) {
 		var foodInstance = Instantiate (food);
-		foodInstance.name = "Fastfood(Temp)";
+		foodInstance.name = string.Format("{0}(Temp)", food.name);
 
 		var action = new CookShortAction (foodInstance, destination);
 		action.actionSource = gameObject;

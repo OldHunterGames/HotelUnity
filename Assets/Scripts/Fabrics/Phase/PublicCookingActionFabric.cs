@@ -9,7 +9,7 @@ public class PublicCookingActionFabric : PhaseActionFabric {
 
 	override public PhaseAction CreatePhaseAction(GameObject target) {
 		var foodInstance = Instantiate (food);
-		foodInstance.name = "Fastfood(Temp)";
+		foodInstance.name = string.Format("{0}(Temp)", food.name);
 
 		var action = new MassCookPhaseAction (foodInstance, destination);
 		action.actionSource = gameObject;
