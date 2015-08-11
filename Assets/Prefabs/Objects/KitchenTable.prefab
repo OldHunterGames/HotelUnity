@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11444690}
   m_Layer: 0
   m_Name: KitchenTable
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb13fe0a88906b47a95b5711fc96ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food: {fileID: 128942, guid: 420731246741a460490b378e6794f5de, type: 2}
+  food: {fileID: 141978, guid: b10eb7cdacd44514da65148ec5f66597, type: 2}
   destination: {fileID: 0}
 --- !u!114 &11444690
 MonoBehaviour:
@@ -68,7 +68,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d476e40c2ac59b4bb8a034c494c2f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food: {fileID: 128942, guid: 420731246741a460490b378e6794f5de, type: 2}
+  title: 
+  food: {fileID: 131474, guid: 047a2c27180373e449d8a01e8e5ff5f4, type: 2}
   destination: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
@@ -84,6 +85,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: needName
       value: "\u041E\u0431\u0449\u0438\u0439 \u043E\u0431\u0435\u0434"
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: food
+      value: 
+      objectReference: {fileID: 141978, guid: b10eb7cdacd44514da65148ec5f66597, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Object
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
