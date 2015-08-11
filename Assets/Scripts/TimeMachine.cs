@@ -7,9 +7,11 @@ public class TimeMachine {
 	public static readonly TimeMachine Instance = new TimeMachine();
 	
 	private GameObject[] _characters;
+	private GameObject[] _objects;
 
 	public TimeMachine() {
 		UpdateCharactersList ();
+		UpdateObjectsList ();
 	}
 
 	public int ExecuteShortActions() {
@@ -35,7 +37,14 @@ public class TimeMachine {
 			phaseAction.ExecuteAction();
 		}
 
-		foreach (var listener in GetPhaseEventListenersEnumerable()) {
+		UpdateCharactersList ();
+		UpdateObjectsList ();
+
+		foreach (var listener in GetCharactersPhaseEventListenersEnumerable()) {
+			listener.OnPhaseFinish();
+		}
+
+		foreach (var listener in GetObjectsPhaseEventListenersEnumerable()) {
 			listener.OnPhaseFinish();
 		}
 	}
@@ -43,6 +52,11 @@ public class TimeMachine {
 	public void UpdateCharactersList () {
 		_characters = GameObject.FindGameObjectsWithTag ("Character");
 		Debug.Assert (_characters != null, "Scene should contains 'Characters' node.");
+	}
+
+	public void UpdateObjectsList () {
+		_objects = GameObject.FindGameObjectsWithTag ("Object");
+		Debug.Assert (_characters != null, "Scene should contains 'Objects' node.");
 	}
 
 	private IEnumerable<ShortActionsProducer> GetShortActionsProducersEnumerable() {
@@ -93,9 +107,17 @@ public class TimeMachine {
 		}
 	}
 
-	private IEnumerable<IPhaseEventsListener> GetPhaseEventListenersEnumerable() {
+	private IEnumerable<IPhaseEventsListener> GetCharactersPhaseEventListenersEnumerable() {
 		foreach (var character in _characters) {
 			foreach (var component in character.GetComponents<IPhaseEventsListener>()) {
+				yield return component as IPhaseEventsListener;
+			}
+		}
+	}
+
+	private IEnumerable<IPhaseEventsListener> GetObjectsPhaseEventListenersEnumerable() {
+		foreach (var currentObject in _objects) {
+			foreach (var component in currentObject.GetComponents<IPhaseEventsListener>()) {
 				yield return component as IPhaseEventsListener;
 			}
 		}
