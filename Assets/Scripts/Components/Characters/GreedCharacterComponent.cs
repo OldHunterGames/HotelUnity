@@ -5,7 +5,7 @@ using Utils;
 public class GreedCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 	
 	private const int minGreed = 0;
-	private const int maxGreed = 15;
+	private const int maxGreed = 100;
 	
 	[SerializeField]
 	private int _greed = minGreed;
@@ -20,6 +20,6 @@ public class GreedCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 	}
 	
 	public void OnPhaseFinish() {
-		--greed;
+		++greed;
 	}
 }

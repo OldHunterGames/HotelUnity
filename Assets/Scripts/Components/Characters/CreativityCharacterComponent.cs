@@ -5,7 +5,7 @@ using Utils;
 public class CreativityCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 	
 	private const int minCreativity = 0;
-	private const int maxCreativity = 15;
+	private const int maxCreativity = 100;
 
 	[SerializeField]
 	private int _creativity = minCreativity;
@@ -20,6 +20,6 @@ public class CreativityCharacterComponent : MonoBehaviour, IPhaseEventsListener 
 	}
 	
 	public void OnPhaseFinish() {
-		--creativity;
+		++creativity;
 	}
 }

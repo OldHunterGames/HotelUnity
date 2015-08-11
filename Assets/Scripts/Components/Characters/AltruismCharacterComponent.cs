@@ -5,7 +5,7 @@ using Utils;
 public class AltruismCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 
 	private const int minAltruism = 0;
-	private const int maxAltruism = 15;
+	private const int maxAltruism = 100;
 	
 	[SerializeField]
 	private int _altruism = minAltruism;
@@ -20,6 +20,6 @@ public class AltruismCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 	}
 	
 	public void OnPhaseFinish() {
-		--altruism;
+		++altruism;
 	}
 }

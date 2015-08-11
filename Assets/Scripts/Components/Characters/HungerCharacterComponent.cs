@@ -5,7 +5,7 @@ using Utils;
 public class HungerCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 
 	private const int minHunger = 0;
-	private const int maxHunger = 5;
+	private const int maxHunger = 100;
 
 	[SerializeField]
 	private int _hunger = minHunger;

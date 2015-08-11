@@ -5,7 +5,7 @@ using Utils;
 public class AmbitionCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 	
 	private const int minAmbition = 0;
-	private const int maxAmbition = 15;
+	private const int maxAmbition = 100;
 	
 	[SerializeField]
 	private int _ambition = minAmbition;
@@ -20,6 +20,6 @@ public class AmbitionCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 	}
 	
 	public void OnPhaseFinish() {
-		--ambition;
+		++ambition;
 	}
 }

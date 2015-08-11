@@ -5,7 +5,7 @@ using Utils;
 public class CommunicationCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 	
 	private const int minCommunication = 0;
-	private const int maxCommunication = 15;
+	private const int maxCommunication = 100;
 	
 	[SerializeField]
 	private int _communication = minCommunication;
@@ -20,6 +20,6 @@ public class CommunicationCharacterComponent : MonoBehaviour, IPhaseEventsListen
 	}
 	
 	public void OnPhaseFinish() {
-		--communication;
+		++communication;
 	}
 }

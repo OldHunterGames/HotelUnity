@@ -5,7 +5,7 @@ using Utils;
 public class AffinityCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 
 	private const int minAffinity = 0;
-	private const int maxAffinity = 15;
+	private const int maxAffinity = 100;
 	
 	[SerializeField]
 	private int _affinity = minAffinity;
@@ -20,6 +20,6 @@ public class AffinityCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 	}
 	
 	public void OnPhaseFinish() {
-		--affinity;
+		++affinity;
 	}
 }

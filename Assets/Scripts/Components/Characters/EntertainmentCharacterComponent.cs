@@ -4,7 +4,7 @@ using Utils;
 
 public class EntertainmentCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 	
-	private const int minEntertainment = -1;
+	private const int minEntertainment = 0;
 	private const int maxEntertainment = 100;
 	
 	[SerializeField]

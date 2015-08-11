@@ -5,7 +5,7 @@ using Utils;
 public class AuthorityCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 	
 	private const int minAuthority = 0;
-	private const int maxAuthority = 15;
+	private const int maxAuthority = 100;
 	
 	[SerializeField]
 	private int _authority = minAuthority;
@@ -20,6 +20,6 @@ public class AuthorityCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 	}
 	
 	public void OnPhaseFinish() {
-		--authority;
+		++authority;
 	}
 }

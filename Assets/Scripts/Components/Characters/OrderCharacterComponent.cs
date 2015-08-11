@@ -5,7 +5,7 @@ using Utils;
 public class OrderCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 	
 	private const int minOrder = 0;
-	private const int maxOrder = 15;
+	private const int maxOrder = 100;
 	
 	[SerializeField]
 	private int _order = minOrder;
@@ -20,6 +20,6 @@ public class OrderCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 	}
 	
 	public void OnPhaseFinish() {
-		--order;
+		++order;
 	}
 }
