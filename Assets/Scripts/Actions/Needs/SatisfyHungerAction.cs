@@ -4,12 +4,12 @@ using System.Collections;
 public class SatisfyHungerAction : Action {
 
 	public override void ExecuteAction() {
-		var component = actionTarget.GetComponent<HungerCharacterComponent> ();
-		Debug.Assert (component != null, "Source object should attach HedonismCharacterComponent.");
+		var needComponent = actionTarget.GetComponent<HungerCharacterComponent> ();
+		Debug.Assert (needComponent != null, "Source object should attach HungerCharacterComponent.");
 		var hedonismDetails = actionSource.GetComponent<HungerObjectDetails> ();
-		Debug.Assert (hedonismDetails != null, "Source object should attach HedonismObjectDetails.");
+		Debug.Assert (hedonismDetails != null, "Source object should attach HungerObjectDetails.");
 		
-		component.hunger += hedonismDetails.needSatisfyRate;
+		needComponent.hunger += hedonismDetails.needSatisfyRate;
 		Debug.Log (string.Format ("Phase action '{0}'. '{1}' satisfy his Food need via '{2}'.", GetType(), actionTarget.name, actionSource.name));
 	}
 }
