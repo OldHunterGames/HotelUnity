@@ -12,8 +12,8 @@ public class EatShortActionFabric : ShortActionFabric {
 
 	public override string caption {
 		get {
-			var foodInfo = gameObject.GetComponent<FoodDetailsComponent>();
-			string foodName = foodInfo.foodName.Length > 0 ? foodInfo.foodName : gameObject.name;
+			var foodInfo = gameObject.GetComponent<HungerObjectDetails>();
+			string foodName = foodInfo.needName.Length > 0 ? foodInfo.needName : gameObject.name;
 
 			return string.Format("Съесть {0}", foodName);
 		}
