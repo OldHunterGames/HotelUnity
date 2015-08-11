@@ -18,7 +18,7 @@ public class TimeMachine {
 		foreach (var shortAction in GetShortActionsEnumerable()) {
 			shortActionsCount++;
 
-			shortAction.ExecuteShortAction();
+			shortAction.ExecuteAction();
 		}
 
 		return shortActionsCount;
@@ -28,7 +28,7 @@ public class TimeMachine {
 		while (ExecuteShortActions() > 0) {}
 
 		foreach (var phaseAction in GetPhaseActionsEnumerable()) {
-			phaseAction.ExecutePhaseAction();
+			phaseAction.ExecuteAction();
 		}
 
 		foreach (var listener in GetPhaseEventListenersEnumerable()) {

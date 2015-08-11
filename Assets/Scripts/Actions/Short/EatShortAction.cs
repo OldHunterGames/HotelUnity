@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EatShortAction : ShortAction {
 		
-	override public void ExecuteShortAction() {
+	override public void ExecuteAction() {
 		var component = actionTarget.GetComponent<HungerCharacterComponent> ();
 		Debug.Assert (component != null, "Source object should attach HungerCharacterComponent.");
 		var foodDetails = actionSource.GetComponent<FoodDetailsComponent> ();

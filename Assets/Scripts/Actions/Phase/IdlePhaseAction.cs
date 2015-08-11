@@ -3,7 +3,7 @@ using System.Collections;
 
 public class IdlePhaseAction : PhaseAction {
 	
-	override public void ExecutePhaseAction() {
+	override public void ExecuteAction() {
 		
 	}
 }
