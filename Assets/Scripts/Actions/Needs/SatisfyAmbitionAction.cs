@@ -9,7 +9,7 @@ public class SatisfyAmbitionAction : Action {
 		var needDetails = actionSource.GetComponent<AmbitionObjectDetails> ();
 		Debug.Assert (needDetails != null, "Source object should attach AmbitionObjectDetails.");
 		
-		needComponent.ambition -= needDetails.needSatisfyRate;
+		needComponent.value -= needDetails.needSatisfyRate;
 		Debug.Log (string.Format ("Phase action '{0}'. '{1}' satisfy his Ambition need via '{2}'.", GetType(), actionTarget.name, actionSource.name));
 	}
 }

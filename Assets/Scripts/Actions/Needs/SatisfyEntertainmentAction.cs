@@ -9,7 +9,7 @@ public class SatisfyEntertainmentAction : Action {
 		var needDetails = actionSource.GetComponent<EntertainmentObjectDetails> ();
 		Debug.Assert (needDetails != null, "Source object should attach EntertainmentObjectDetails.");
 		
-		needComponent.entertainment -= needDetails.needSatisfyRate;
+		needComponent.value -= needDetails.needSatisfyRate;
 		Debug.Log (string.Format ("Phase action '{0}'. '{1}' satisfy his Entertainment need via '{2}'.", GetType(), actionTarget.name, actionSource.name));
 	}
 }

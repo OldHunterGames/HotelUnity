@@ -9,7 +9,7 @@ public class SatisfyCuriosityAction : Action {
 		var needDetails = actionSource.GetComponent<CuriosityObjectDetails> ();
 		Debug.Assert (needDetails != null, "Source object should attach CuriosityObjectDetails.");
 		
-		needComponent.curiosity -= needDetails.needSatisfyRate;
+		needComponent.value -= needDetails.needSatisfyRate;
 		Debug.Log (string.Format ("Phase action '{0}'. '{1}' satisfy his Curiosity need via '{2}'.", GetType(), actionTarget.name, actionSource.name));
 	}
 }

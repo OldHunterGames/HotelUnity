@@ -9,7 +9,7 @@ public class SatisfyAltruismAction : Action {
 		var needDetails = actionSource.GetComponent<AltruismObjectDetails> ();
 		Debug.Assert (needDetails != null, "Source object should attach AltruismObjectDetails.");
 		
-		needComponent.altruism -= needDetails.needSatisfyRate;
+		needComponent.value -= needDetails.needSatisfyRate;
 		Debug.Log (string.Format ("Phase action '{0}'. '{1}' satisfy his Altruism need via '{2}'.", GetType(), actionTarget.name, actionSource.name));
 	}
 }

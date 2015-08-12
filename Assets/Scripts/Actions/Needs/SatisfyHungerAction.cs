@@ -9,7 +9,7 @@ public class SatisfyHungerAction : Action {
 		var hedonismDetails = actionSource.GetComponent<HungerObjectDetails> ();
 		Debug.Assert (hedonismDetails != null, "Source object should attach HungerObjectDetails.");
 		
-		needComponent.hunger -= hedonismDetails.needSatisfyRate;
+		needComponent.value -= hedonismDetails.needSatisfyRate;
 		Debug.Log (string.Format ("Phase action '{0}'. '{1}' satisfy his Food need via '{2}'.", GetType(), actionTarget.name, actionSource.name));
 	}
 }

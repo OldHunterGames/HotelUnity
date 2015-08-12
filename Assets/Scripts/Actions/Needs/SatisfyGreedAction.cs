@@ -9,7 +9,7 @@ public class SatisfyGreedAction : Action {
 		var needDetails = actionSource.GetComponent<GreedObjectDetails> ();
 		Debug.Assert (needDetails != null, "Source object should attach GreedObjectDetails.");
 		
-		needComponent.greed -= needDetails.needSatisfyRate;
+		needComponent.value -= needDetails.needSatisfyRate;
 		Debug.Log (string.Format ("Phase action '{0}'. '{1}' satisfy his Greed need via '{2}'.", GetType(), actionTarget.name, actionSource.name));
 	}
 }
