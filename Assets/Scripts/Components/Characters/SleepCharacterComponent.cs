@@ -18,8 +18,12 @@ public class SleepCharacterComponent : MonoBehaviour, IPhaseEventsListener {
 			_freshness = RangeValidator.validate(value, minFreshness, maxFreshness);
 		}
 	}
-	
+
 	public void OnPhaseFinish() {
-		--freshness;
+		if(--freshness < minFreshness)
+		{
+			freshness = minFreshness;
+			Debug.Log(string.Format("{0} wants to satisfy his {1} need", gameObject.name, GetType().Name.Remove(GetType().Name.IndexOf("Character"))));
+		}
 	}
 }
