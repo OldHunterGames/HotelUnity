@@ -15,10 +15,4 @@ public class PrivateCookingActionFabric : ShortActionFabric {
 		action.actionTarget = target;
 		return action;
 	}
-	
-	public override string caption {
-		get {
-			return string.Format("Приготовить себе {0} на {1}", food.name, gameObject.name);
-		}
-	}
 }

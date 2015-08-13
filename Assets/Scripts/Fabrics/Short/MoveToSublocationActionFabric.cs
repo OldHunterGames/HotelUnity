@@ -13,12 +13,9 @@ public class MoveToSublocationActionFabric : ShortActionFabric {
 		return action;
 	}
 
-	public override string caption {
+	public override string title {
 		get {
-			var sublocationInfo = TargetSublocation.GetComponent<Sublocation>();
-			string sublocationName = sublocationInfo.locationName.Length > 0 ? sublocationInfo.locationName : TargetSublocation.name;
-
-			return string.Format("Перейти в {0}", sublocationName);
+			return _title.Length == 0 ? string.Format("Move to {0}", TargetSublocation.name) : _title;
 		}
 	}
 }

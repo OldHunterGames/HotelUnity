@@ -41,8 +41,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd72fc0f5ab6fcd4aac6d8aa1b43a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needName: 
-  needDescription: 
+  _title: 
+  _description: 
   needSatisfyRate: 5
 --- !u!114 &11449368
 MonoBehaviour:
@@ -67,6 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2eeae68839b4446a077517f93687fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _title: "\u041F\u0438\u0440"
+  _description: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -81,6 +83,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _title
+      value: "\u041F\u0438\u0440"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

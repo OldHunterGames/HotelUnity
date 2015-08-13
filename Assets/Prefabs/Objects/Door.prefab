@@ -39,6 +39,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9a141f6e171426982030b1394b0df1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _title: 
+  _description: 
   TargetSublocation: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
@@ -58,6 +60,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _title
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

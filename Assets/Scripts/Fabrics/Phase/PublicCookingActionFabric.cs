@@ -3,7 +3,6 @@ using System.Collections;
 
 public class PublicCookingActionFabric : PhaseActionFabric {
 
-	public string title;
 	public GameObject food;
 	public GameObject destination;
 
@@ -15,11 +14,5 @@ public class PublicCookingActionFabric : PhaseActionFabric {
 		action.actionSource = gameObject;
 		action.actionTarget = target;
 		return action;
-	}
-	
-	public override string caption {
-		get {
-			return title;
-		}
 	}
 }

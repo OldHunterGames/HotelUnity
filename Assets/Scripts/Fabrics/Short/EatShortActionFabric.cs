@@ -9,13 +9,4 @@ public class EatShortActionFabric : ShortActionFabric {
 		action.actionTarget = target;
 		return action;
 	}
-
-	public override string caption {
-		get {
-			var foodInfo = gameObject.GetComponent<HungerObjectDetails>();
-			string foodName = foodInfo.needName.Length > 0 ? foodInfo.needName : gameObject.name;
-
-			return string.Format("Съесть {0}", foodName);
-		}
-	}
 }

@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class ShortActionFabric : MonoBehaviour {
+public abstract class ShortActionFabric : BasicInformation {
 
 	public abstract ShortAction CreateShortAction(GameObject target);
 
-	public virtual string caption {
+	public override string title {
 		get {
-			return GetType().ToString();
+			return _title.Length == 0 ? gameObject.name : _title;
 		}
 	}
 }

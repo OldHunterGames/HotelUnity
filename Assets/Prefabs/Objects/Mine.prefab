@@ -40,7 +40,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652c897a130d9f142a29596583c468dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
+  _title: "\u0420\u0430\u0431\u043E\u0442\u0430\u0442\u044C \u0432 \u0448\u0430\u0445\u0442\u0435"
+  _description: 
 --- !u!114 &11472660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,8 +53,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c896636e4730ccf41afdd76106fdf3cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needName: 
-  needDescription: 
+  _title: 
+  _description: 
   needSatisfyRate: 15
 --- !u!1001 &100100000
 Prefab:
@@ -69,6 +70,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _title
+      value: "\u0420\u0430\u0431\u043E\u0442\u0430\u0442\u044C \u0432 \u0448\u0430\u0445\u0442\u0435"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

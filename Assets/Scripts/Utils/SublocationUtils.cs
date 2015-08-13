@@ -102,7 +102,7 @@ public class SublocationUtils {
 			var buttonText = button.GetComponentInChildren<Text>();
 
 			button.transform.SetParent(scrollViewContentShort.transform);
-			buttonText.text = shortActionFabric.caption;
+			buttonText.text = shortActionFabric.title;
 
 			CreateShortActionButtonListener(button, shortActionFabric);
 		}
@@ -118,7 +118,7 @@ public class SublocationUtils {
 			var buttonText = button.GetComponentInChildren<Text>();
 
 			button.transform.SetParent(scrollViewContentPhase.transform);
-			buttonText.text = phaseActionFabric.caption;
+			buttonText.text = phaseActionFabric.title;
 
 			CreatePhaseActionButtonListener(button, phaseActionFabric);
 		}
