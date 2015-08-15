@@ -21,7 +21,13 @@ public class SublocationUtils {
 		"Lobby",
 		"SportsBar",
 		"RoomInside",
-		"TestRoom"
+		"TestRoom",
+		"Room1",
+		"Room1Entrance",
+		"Room2",
+		"Room2Entrance",
+		"Room3",
+		"Room3Entrance"
 	};
 
 	private static Dictionary<string, string> SUBLOCATION_TO_SCENE = new Dictionary<string, string> {
@@ -36,6 +42,12 @@ public class SublocationUtils {
 		{"SportsBar", "SportsBar"},
 		{"RoomInside", "RoomInside"},
 		{"TestRoom", "TestRoom"},
+		{"Room1", "Room1"},
+		{"Room1Entrance", "Room1Entrance"},
+		{"Room2", "Room2"},
+		{"Room2Entrance", "Room2Entrance"},
+		{"Room3", "Room3"},
+		{"Room3Entrance", "Room3Entrance"}
 	};
 
 	private static SublocationGraph SUBLOCATION_GRAPH = new SublocationGraph();
@@ -97,14 +109,17 @@ public class SublocationUtils {
 			GameObject.Destroy(child.gameObject);
 		}
 
-		foreach (var shortActionFabric in sublocation.GetComponent<Sublocation>().ShortActionFabrics) {
-			var button = GameObject.Instantiate (buttonPrefab);
-			var buttonText = button.GetComponentInChildren<Text>();
+		foreach (var shortActionFabric in sublocation.GetComponent<Sublocation>().getActionFabrics<ShortActionFabric>()) {
+			var player = GameObject.Find ("Characters/Player");
+			if (shortActionFabric.characterCanSeeIt(player)) {
+				var button = GameObject.Instantiate (buttonPrefab);
+				var buttonText = button.GetComponentInChildren<Text>();
 
-			button.transform.SetParent(scrollViewContentShort.transform);
-			buttonText.text = shortActionFabric.title;
+				button.transform.SetParent(scrollViewContentShort.transform);
+				buttonText.text = shortActionFabric.title;
 
-			CreateShortActionButtonListener(button, shortActionFabric);
+				CreateShortActionButtonListener(button, shortActionFabric);
+			}
 		}
 		
 		var scrollViewContentPhase = GameObject.Find ("Canvas/PanelPhaseActions/ScrollView/Content");
@@ -113,14 +128,17 @@ public class SublocationUtils {
             GameObject.Destroy(child.gameObject);
         }
 		
-		foreach (var phaseActionFabric in sublocation.GetComponent<Sublocation>().PhaseActionFabrics) {
-			var button = GameObject.Instantiate (buttonPrefab);
-			var buttonText = button.GetComponentInChildren<Text>();
+		foreach (var phaseActionFabric in sublocation.GetComponent<Sublocation>().getActionFabrics<PhaseActionFabric>()) {
+			var player = GameObject.Find ("Characters/Player");
+			if (phaseActionFabric.characterCanSeeIt(player)) {
+				var button = GameObject.Instantiate (buttonPrefab);
+				var buttonText = button.GetComponentInChildren<Text>();
 
-			button.transform.SetParent(scrollViewContentPhase.transform);
-			buttonText.text = phaseActionFabric.title;
+				button.transform.SetParent(scrollViewContentPhase.transform);
+				buttonText.text = phaseActionFabric.title;
 
-			CreatePhaseActionButtonListener(button, phaseActionFabric);
+				CreatePhaseActionButtonListener(button, phaseActionFabric);
+			}
 		}
 	}
 
